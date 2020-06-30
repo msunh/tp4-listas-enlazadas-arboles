@@ -1,11 +1,16 @@
 from graphviz import Digraph
+from tdaListaEnlazada import *
 
 ###########################   N O D O 
 
 class NodoArbol:
   
-  def __init__(self, dato = None):
+  def __init__(self, dato = None, direccionWeb = None):
+    listaWeb = Lista()
+
     self.dato = dato
+    listaWeb.append(direccionWeb)
+
     self.izquierdo = None
     self.derecho = None
 
@@ -209,7 +214,7 @@ class NodoArbol:
 ################################ A R B O L
 
 
-class ABB:
+class ArbolBuscador:
   def __init__(self, entrada = None):
     self.raiz = None
     if entrada:
@@ -238,8 +243,8 @@ class ABB:
       print("Arbol vacio.")
 
   #Inserta nuevo nodo en el lugar que corresponde en el árbol con el elemento que recibe como parámetro.
-  def insertar(self, dato):
-    nuevoNodo = NodoArbol(dato)
+  def insertar(self, dato, direccionWeb):
+    nuevoNodo = NodoArbol(dato, direccionWeb)
     if self.estaVacio():
       self.raiz = nuevoNodo
     else:
@@ -293,6 +298,4 @@ class ABB:
       treeDot.render(fileName, view=True)
 
 
-
-
-##***      
+      
