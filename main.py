@@ -10,19 +10,21 @@ from tdaListaEnlazada import *
 
 
 # arbol1 = ArbolBuscador(["juego","estado", "radio", "casa", "pato", "frio", "zorro", "balon", "nariz"])
-# # #arbol1.insertar("pato")
+# # #arbol1.insertarPalabra("pato")
 # arbol1.treePlot()
 
 # arbol1 = ArbolBuscador("juego", "play.com")
 # arbol1 = ArbolBuscador("entrada", "ticketeck.com")
 
 arbol1 = ArbolBuscador()
-arbol1.insertar("juego", "juampy.com");
-
-arbol1.insertar("estado", "carlitos.com");
-#arbol1.insertar("estado", "marcos.com");
-arbol1.insertar("radio", "cachito.com");
+arbol1.insertarPalabra("juego", "juampy.com")
+arbol1.insertarPalabra("juego", "juan.com")
+arbol1.insertarPalabra("juego", "juan.com")
+arbol1.insertarPalabra("estado", "carlitos.com")
+#arbol1.insertarPalabra("estado", "marcos.com")
+arbol1.insertarPalabra("radio", "cachito.com")
 arbol1.treePlot()
+arbol1.raiz.mostrarLista()
 
 
 

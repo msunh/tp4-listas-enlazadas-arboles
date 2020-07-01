@@ -1,0 +1,15 @@
+digraph {
+	juego [label=juego]
+	estado [label=estado]
+	juego -> estado
+	Noneestadol [label=None]
+	estado -> Noneestadol
+	Noneestador [label=None]
+	estado -> Noneestador
+	radio [label=radio]
+	juego -> radio
+	Noneradiol [label=None]
+	radio -> Noneradiol
+	Noneradior [label=None]
+	radio -> Noneradior
+}

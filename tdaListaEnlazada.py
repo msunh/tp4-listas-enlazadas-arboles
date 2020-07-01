@@ -88,6 +88,16 @@ class NodoLista:
         cant = self.siguiente.deleteAll(dato)  
     return cant
 
+  
+  def estaEnLista(self,dato):
+    aux = False
+    if self.dato == dato:
+      aux = True
+    else:
+      if self.tieneSiguiente():
+        aux = self.siguiente.estaEnLista(dato)
+    return aux
+      
 
 
 ################## L I S T A
@@ -183,14 +193,28 @@ class Lista:
         cant = self.primero.deleteAll(dato)
     return cant
 
+  def estaEnLista(self,paginaWeb):
+    aux = False
+    
+    if not self.estaVacia():
+      aux = self.primero.estaEnLista(paginaWeb)
+    return aux
+      
+      
+      
+lista1 = Lista()
+lista1.append("carlos.com")
+lista1.append("carlitos.com")
 
+print(lista1.estaEnLista("carlitos.com"))
+    
 
-  def deleteAll(self, dato, actPos = 0):
-    cant = 0
-    if not self.estaVacia() and actPos < self.len():
-      if self.getDato(actPos) == dato:
-        self.delete(actPos)
-        cant = 1 + self.deleteAll(dato, actPos)
-      else:
-        cant = self.deleteAll(dato, actPos+1)
-    return cant
+  # def deleteAll(self, dato, actPos = 0):
+  #   cant = 0
+  #   if not self.estaVacia() and actPos < self.len():
+  #     if self.getDato(actPos) == dato:
+  #       self.delete(actPos)
+  #       cant = 1 + self.deleteAll(dato, actPos)
+  #     else:
+  #       cant = self.deleteAll(dato, actPos+1)
+  #   return cant

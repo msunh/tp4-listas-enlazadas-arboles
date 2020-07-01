@@ -6,11 +6,9 @@ from tdaListaEnlazada import *
 class NodoArbol:
   
   def __init__(self, dato = None, direccionWeb = None):
-    listaWeb = Lista()
-
+    self.listaWeb = Lista()
     self.dato = dato
-    listaWeb.append(direccionWeb)
-
+    self.listaWeb.append(direccionWeb)
     self.izquierdo = None
     self.derecho = None
 
@@ -46,17 +44,19 @@ class NodoArbol:
     
   #insertar dato
 
-  def insertar(self, nuevoNodo):
+  def insertar(self, nuevoNodo , direccionWeb):
     if self.dato == nuevoNodo.dato:
-      print("El elemento ya esta en el arbol")
+      # print("La palabra ya se encuentra en el arbol")
+      if not self.listaWeb.estaEnLista(direccionWeb):
+        self.listaWeb.append(direccionWeb)
     elif nuevoNodo.dato < self.dato:
       if self.tieneIzquierdo():
-        self.izquierdo.insertar(nuevoNodo)
+        self.izquierdo.insertar(nuevoNodo,direccionWeb)
       else:
         self.izquierdo = nuevoNodo
     else:
       if self.tieneDerecho():
-        self.derecho.insertar(nuevoNodo)
+        self.derecho.insertar(nuevoNodo,direccionWeb)
       else:
         self.derecho = nuevoNodo  
 
@@ -184,6 +184,8 @@ class NodoArbol:
 
     return nodoDato
 
+  def mostrarLista(self):
+    print(self.listaWeb)
 
 
 
@@ -215,12 +217,10 @@ class NodoArbol:
 
 
 class ArbolBuscador:
-  def __init__(self, entrada = None):
+  def __init__(self):
     self.raiz = None
-    if entrada:
-        for elemento in entrada:
-         self.insertar(elemento)
-
+    
+    
   def estaVacio(self):
     return self.raiz == None
 
@@ -243,12 +243,19 @@ class ArbolBuscador:
       print("Arbol vacio.")
 
   #Inserta nuevo nodo en el lugar que corresponde en el árbol con el elemento que recibe como parámetro.
-  def insertar(self, dato, direccionWeb):
+  # def insertarPalabra(self, dato, direccionWeb):
+  #   nuevoNodo = NodoArbol(dato, direccionWeb)
+  #   if self.estaVacio():
+  #     self.raiz = nuevoNodo
+  #   else:
+  #     self.raiz.insertar(nuevoNodo)
+  
+  def insertarPalabra(self, dato, direccionWeb):
     nuevoNodo = NodoArbol(dato, direccionWeb)
     if self.estaVacio():
       self.raiz = nuevoNodo
     else:
-      self.raiz.insertar(nuevoNodo)
+        self.raiz.insertar(nuevoNodo,direccionWeb)
 
   def cantHojas(self):
     cant = 0 
