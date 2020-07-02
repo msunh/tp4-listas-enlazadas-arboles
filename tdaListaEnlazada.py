@@ -200,6 +200,12 @@ class Lista:
       
       
       
+  def unirListas(self,lista):
+    aux = lista.primero
+    while aux != None: 
+      self.append(aux.dato)
+      aux = aux.siguiente
+      
 # lista1 = Lista()
 # lista1.append("carlos.com")
 # lista1.append("carlitos.com")

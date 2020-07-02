@@ -24,16 +24,19 @@ arbol1.insertarPalabra("estado", "carlitos.com")
 #arbol1.insertarPalabra("estado", "marcos.com")
 arbol1.insertarPalabra("radio", "cachito.com")
 #arbol1.treePlot()
-arbol1.raiz.mostrarLista()
+# arbol1.raiz.mostrarLista()
 lista1 = Lista()
 
 lista1.append("perro")
-lista1.append("perro2")
-lista1.append("perro3")
+# lista1.append("juego")
+lista1.append("radio")
+lista1.append("rodado")
 
-arbol1.insertarPagina(lista1, "cualquiera.com")
+print(arbol1.buscarPalabras(lista1))
+
+# arbol1.insertarPagina(lista1, "cualquiera.com")
 #arbol1.treePlot()
-arbol1.inOrden()
+
 
 
 

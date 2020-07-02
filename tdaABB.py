@@ -64,6 +64,25 @@ class NodoArbol:
       else:
         self.derecho = nuevoNodo  
 
+  
+  
+  def buscarPalabra(self,palabra):
+      listaDePalabras = Lista()
+      
+      if self.dato == palabra :
+        listaDePalabras = self.listaWeb
+      elif self.dato > palabra:
+        if self.tieneIzquierdo():
+          listaDePalabras = self.izquierdo.buscarPalabra(palabra)
+      else:
+        if self.tieneDerecho():
+          listaDePalabras = self.derecho.buscarPalabra(palabra)
+          
+      return listaDePalabras
+    
+      
+
+  
   #grado
 
   def grado(self):
@@ -211,12 +230,6 @@ class NodoArbol:
           dot.edge(str(self.dato), "None"+str(self.dato)+"r")
 
 
-
-
-
-
-
-
 ################################ A R B O L
 
 
@@ -263,7 +276,17 @@ class ArbolBuscador:
         self.insertarPalabra(aux.dato, direccionWeb)
         aux = aux.siguiente
 
-
+  def buscarPalabras(self,listaDePalabras):
+    listaWeb = Lista()
+    aux = listaDePalabras.primero
+    if not listaDePalabras.estaVacia():
+      while aux != None:
+        listaWeb.unirListas(self.raiz.buscarPalabra(aux.dato))
+        aux = aux.siguiente
+    return listaWeb
+  
+  
+  
 
   def cantHojas(self):
     cant = 0 
