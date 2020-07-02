@@ -1,7 +1,5 @@
 ##lista dinamica recursiva
 
-
-
 ###########################  N O D O  L I S T A 
 
 class NodoLista:
@@ -202,11 +200,11 @@ class Lista:
       
       
       
-lista1 = Lista()
-lista1.append("carlos.com")
-lista1.append("carlitos.com")
+# lista1 = Lista()
+# lista1.append("carlos.com")
+# lista1.append("carlitos.com")
 
-print(lista1.estaEnLista("carlitos.com"))
+# print(lista1.estaEnLista("carlitos.com"))
     
 
   # def deleteAll(self, dato, actPos = 0):
