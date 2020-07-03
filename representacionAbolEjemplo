@@ -2,14 +2,26 @@ digraph {
 	juego [label=juego]
 	estado [label=estado]
 	juego -> estado
-	Noneestadol [label=None]
-	estado -> Noneestadol
+	arbolito [label=arbolito]
+	estado -> arbolito
+	Nonearbolitol [label=None]
+	arbolito -> Nonearbolitol
+	Nonearbolitor [label=None]
+	arbolito -> Nonearbolitor
 	Noneestador [label=None]
 	estado -> Noneestador
 	radio [label=radio]
 	juego -> radio
-	Noneradiol [label=None]
-	radio -> Noneradiol
-	Noneradior [label=None]
-	radio -> Noneradior
+	perro [label=perro]
+	radio -> perro
+	Noneperrol [label=None]
+	perro -> Noneperrol
+	Noneperror [label=None]
+	perro -> Noneperror
+	rodado [label=rodado]
+	radio -> rodado
+	Nonerodadol [label=None]
+	rodado -> Nonerodadol
+	Nonerodador [label=None]
+	rodado -> Nonerodador
 }

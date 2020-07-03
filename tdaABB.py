@@ -42,7 +42,7 @@ class NodoArbol:
     return cantHojas  
     
     
-  #insertar dato
+  #insertar dato del nodoArbol
 
   def insertar(self, nuevoNodo , direccionWeb):
     if self.dato == nuevoNodo.dato:
@@ -65,25 +65,22 @@ class NodoArbol:
         self.derecho = nuevoNodo  
 
   
-  
+  #buscar palabra del nodoArbol
   def buscarPalabra(self,palabra):
-      listaDePalabras = Lista()
+      listaDePalabrasAux = Lista()
       
       if self.dato == palabra :
-        listaDePalabras = self.listaWeb
+        listaDePalabrasAux = self.listaWeb
       elif self.dato > palabra:
         if self.tieneIzquierdo():
-          listaDePalabras = self.izquierdo.buscarPalabra(palabra)
+          listaDePalabrasAux = self.izquierdo.buscarPalabra(palabra)
       else:
         if self.tieneDerecho():
-          listaDePalabras = self.derecho.buscarPalabra(palabra)
+          listaDePalabrasAux = self.derecho.buscarPalabra(palabra)
           
-      return listaDePalabras
-    
-      
+      return listaDePalabrasAux
 
-  
-  #grado
+  #grado del nodoArbol
 
   def grado(self):
     grado = 0
@@ -115,9 +112,6 @@ class NodoArbol:
       if self.tieneIzquierdo():
         self.izquierdo.nivelALista(nivel, listaNivel, nivelNodo+1)
 
-
-
-
   #recorrido pre-orden
   def preOrden(self):
         
@@ -141,7 +135,6 @@ class NodoArbol:
       self.derecho.inOrden()
     
   #recorrido post orden
-
   def postOrden(self):
 
     if self.tieneIzquierdo():
@@ -154,7 +147,6 @@ class NodoArbol:
 
 
   #busca minimo
-
   def buscaMinimo(self):
     dato = None
     if self.tieneIzquierdo():
@@ -164,6 +156,7 @@ class NodoArbol:
 
     return dato    
 
+  #busca maximo
   def buscaMaximo(self):
     dato = None
     if self.tieneDerecho():
@@ -173,14 +166,14 @@ class NodoArbol:
 
     return dato
 
-
+  #predecesor del Nodo
   def predecesor(self):
     predecesor = None
     if self.tieneIzquierdo():
       predecesor = self.izquierdo.buscaMaximo()
     return predecesor   
 
-
+  #sucesor del Nodo
   def sucesor(self):
     sucesor = None
     if self.tieneDerecho():
@@ -189,10 +182,10 @@ class NodoArbol:
 
 
 
-  #buscar dato
+  #buscar dato en el nodo retorna el dato
 
   def buscar(self, dato):
-        
+       
     nodoDato = None
 
     if self.dato == dato:
@@ -206,6 +199,7 @@ class NodoArbol:
           nodoDato = self.derecho.buscar(dato)
 
     return nodoDato
+
 
   def mostrarLista(self):
     print(self.listaWeb)
@@ -267,6 +261,7 @@ class ArbolBuscador:
     else:
         self.raiz.insertar(nuevoNodo,direccionWeb)
 
+  #recibe por parametro una lista de palabras con una direccion web en comun
   def insertarPagina(self, listaDePalabras, direccionWeb):
     
     if not listaDePalabras.estaVacia():
@@ -276,6 +271,7 @@ class ArbolBuscador:
         self.insertarPalabra(aux.dato, direccionWeb)
         aux = aux.siguiente
 
+  #recibe una lista de palabras y devuelve todas las paginas web  en donde estan
   def buscarPalabras(self,listaDePalabras):
     listaWeb = Lista()
     aux = listaDePalabras.primero

@@ -21,22 +21,24 @@ arbol1.insertarPalabra("juego", "juampy.com")
 arbol1.insertarPalabra("juego", "juan.com")
 arbol1.insertarPalabra("juego", "juan.com")
 arbol1.insertarPalabra("estado", "carlitos.com")
-#arbol1.insertarPalabra("estado", "marcos.com")
+arbol1.insertarPalabra("estado", "marcos.com")
 arbol1.insertarPalabra("radio", "cachito.com")
+arbol1.insertarPalabra("arbolito", "plantas.com")
 #arbol1.treePlot()
-# arbol1.raiz.mostrarLista()
-lista1 = Lista()
+#arbol1.raiz.mostrarLista()
 
-lista1.append("perro")
-# lista1.append("juego")
-lista1.append("radio")
-lista1.append("rodado")
+#creo mi lista de palabras para pasar por parametro a la funcion insertar pagina
+listaDePalabras = Lista()
+listaDePalabras.append("perro")
+listaDePalabras.append("juego")
+listaDePalabras.append("radio")
+listaDePalabras.append("rodado")
+listaDePalabras.append("arbolito")
 
-print(arbol1.buscarPalabras(lista1))
+arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
-# arbol1.insertarPagina(lista1, "cualquiera.com")
 #arbol1.treePlot()
-
+print(arbol1.buscarPalabras(listaDePalabras))
 
 
 

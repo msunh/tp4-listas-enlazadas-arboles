@@ -193,13 +193,10 @@ class Lista:
 
   def estaEnLista(self,paginaWeb):
     aux = False
-    
     if not self.estaVacia():
       aux = self.primero.estaEnLista(paginaWeb)
     return aux
-      
-      
-      
+
   def unirListas(self,lista):
     aux = lista.primero
     while aux != None: 
