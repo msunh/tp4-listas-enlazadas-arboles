@@ -117,6 +117,8 @@ class Lista:
     out += " -|"
     return out
 
+  def vaciarLista(self):
+      self.primero = None
 
   def append(self, dato):
     nodoNuevo = NodoLista(dato)
@@ -202,7 +204,18 @@ class Lista:
     while aux != None: 
       self.append(aux.dato)
       aux = aux.siguiente
-      
+
+  def cantWebRepetidasEnLista(self,paginaWeb):
+    aux = self.primero
+    cont = 0
+    while aux != None:
+      if aux.dato == paginaWeb:
+        cont += 1        
+      aux = aux.siguiente
+    
+    return cont
+
+
 # lista1 = Lista()
 # lista1.append("carlos.com")
 # lista1.append("carlitos.com")

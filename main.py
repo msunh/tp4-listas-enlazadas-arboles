@@ -35,11 +35,15 @@ listaDePalabras.append("radio")
 listaDePalabras.append("rodado")
 listaDePalabras.append("arbolito")
 
+listaDePalabras2 = Lista()
+listaDePalabras2.append("juego")
+listaDePalabras2.append("estado")
+
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
 #arbol1.treePlot()
-print(arbol1.buscarPalabras(listaDePalabras))
-
+#print(arbol1.buscarPalabras(listaDePalabras))
+print(arbol1.buscarPalabras(listaDePalabras2))
 
 
 

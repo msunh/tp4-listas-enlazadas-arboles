@@ -265,22 +265,32 @@ class ArbolBuscador:
   def insertarPagina(self, listaDePalabras, direccionWeb):
     
     if not listaDePalabras.estaVacia():
-      aux = listaDePalabras.primero
-
-      while aux != None:
-        self.insertarPalabra(aux.dato, direccionWeb)
-        aux = aux.siguiente
+      cont = 0
+      while cont < listaDePalabras.len() :    
+        self.insertarPalabra(listaDePalabras.getDato(cont), direccionWeb)
+        cont += 1
 
   #recibe una lista de palabras y devuelve todas las paginas web  en donde estan
   def buscarPalabras(self,listaDePalabras):
     listaWeb = Lista()
-    aux = listaDePalabras.primero
+    cont = 0
+
     if not listaDePalabras.estaVacia():
-      while aux != None:
-        listaWeb.unirListas(self.raiz.buscarPalabra(aux.dato))
-        aux = aux.siguiente
-    return listaWeb
-  
+      while cont < listaDePalabras.len():
+        listaWeb.unirListas(self.raiz.buscarPalabra(listaDePalabras.getDato(cont)))
+        cont +=1
+
+    listaWebClon = listaWeb.clonar()
+    listaWeb.vaciarLista()
+    pos = 0
+
+    while pos < listaWebClon.len():
+          
+      if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
+        listaWeb.append(listaWebClon.getDato(pos))
+      pos +=1
+
+    return listaWeb 
   
   
 
