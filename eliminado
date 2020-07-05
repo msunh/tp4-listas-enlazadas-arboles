@@ -1,0 +1,23 @@
+digraph {
+	juego [label=juego]
+	estado [label=estado]
+	juego -> estado
+	arbolito [label=arbolito]
+	estado -> arbolito
+	Nonearbolitol [label=None]
+	arbolito -> Nonearbolitol
+	Nonearbolitor [label=None]
+	arbolito -> Nonearbolitor
+	Noneestador [label=None]
+	estado -> Noneestador
+	perro [label=perro]
+	juego -> perro
+	Noneperrol [label=None]
+	perro -> Noneperrol
+	rodado [label=rodado]
+	perro -> rodado
+	Nonerodadol [label=None]
+	rodado -> Nonerodadol
+	Nonerodador [label=None]
+	rodado -> Nonerodador
+}

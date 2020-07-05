@@ -42,8 +42,11 @@ listaDePalabras2.append("estado")
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
 #arbol1.treePlot()
-#print(arbol1.buscarPalabras(listaDePalabras))
-print(arbol1.buscarPalabras(listaDePalabras2))
+print(arbol1.buscarPalabras(listaDePalabras))
+#print(arbol1.buscarPalabras(listaDePalabras2))
+print()
+arbol1.eliminar("radio")
+arbol1.treePlot("eliminado")
 
 
 

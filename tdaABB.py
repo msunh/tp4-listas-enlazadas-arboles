@@ -201,6 +201,58 @@ class NodoArbol:
     return nodoDato
 
 
+  def buscaPadre(self, dato): #parte de un nodo , buscando un dato y devuelve : me retorna 3 cosas , un puntero al padre, un puntero al nodo y de que lado del padre esta ese nodo
+    nodoHijo = None              #se definnen los punteros de salida , con esta funcion buscamos el dato de los hijos
+    nodoPadre = None
+    lado = None
+    if dato < self.dato:       #si el dato que busco es menor que el dato en donde estoy 
+      if self.tieneIzquierdo(): #pregunto si el tiene izquierdo (si esta de este lado)
+        if self.izquierdo.dato == dato: #y si coincide con el dato que viene por parametro y lo encuentro
+          nodoHijo = self.izquierdo    #seteo mis punteros, el hijo es izquierdo
+          nodoPadre = self              
+          lado = "izq"                 #y lado es izquierdo 
+        else:                         #tengo que llamar con el hijo izquierdo/nodo izquierdo
+          nodoHijo, nodoPadre, lado = self.izquierdo.buscaPadre(dato) #llamo con el izquierdo
+    else:                            # sino si es mayor, hay que ver el lado derecho 
+      if self.tieneDerecho():       #si tiene derecho
+        if self.derecho.dato == dato: # si lo encuentro del lado derecho
+          nodoHijo = self.derecho   #seteo mis punteros
+          nodoPadre = self
+          lado = "der"              #y lado es igual derecho
+        else:
+          nodoHijo, nodoPadre, lado = self.derecho.buscaPadre(dato) #si no es el que yo quiero , lo mando a buscar al lado derecho
+    return nodoHijo, nodoPadre, lado
+
+
+  def eliminar(self, dato):      #funcion eliminar del nodo
+    nodoEliminar, nodoPadre, lado = self.buscaPadre(dato)  ##lado = "izq" / "der" - funcion que me "busca" y me retorna 3 cosas , un puntero al padre, un puntero al nodo y de que lado del padre esta ese nodo
+    if nodoEliminar != None:            #si es distinto de none, si encontró el dato en el arbol
+      if nodoEliminar.grado() == 2:                      #este es el caso si tiene dos hijos
+        nodoPred = nodoEliminar.predecesor()             #primero buscamos al predecesor del nodo eliminar, ahi tengo un puntero al nodo que quiero eliminar
+        self.eliminar(nodoPred.dato)                     #ahora elimino al predecesor con la misma funcion (elDatoQQueesta en elpredecesor) es el parametro
+        nodoPred.izquierdo = nodoEliminar.izquierdo      #los hijos del nodo predecesor son los que eran los hijos del nodo a eliminar tanto izquierdo
+        nodoPred.derecho = nodoEliminar.derecho          #como derecho
+        if lado == "izq":                                #ahora tengo que poner al nodo predecesor como hijo del nodo padre dependiendo del lado, si es lado izq
+          nodoPadre.izquierdo = nodoPred                 #el nodo predecesor es el hijo izquierdo del nodo padre
+        else:                                            #si es lado derecho 
+          nodoPadre.derecho = nodoPred                   #el nodo predecesor es hijo derecho del nodo padre 
+      elif nodoEliminar.tieneIzquierdo():               # en este caso el hijo solo tiene izquierdo (tiene un solo hijo)
+        if lado == "izq":                               #si el lado apunta al izquierdo, entonces el que quiero eliminar esta a la izquierda del padre
+          nodoPadre.izquierdo = nodoEliminar.izquierdo  # entonces el izquierdo del padre tiene que apuntar al izquierdo del nodo eliminar
+        else:                                           # en este caso solo tiene hijo derecho, (estamos eliminando un nodo que solo tiene izquierdo, pero esta del lado derecho del padre)
+          nodoPadre.derecho = nodoEliminar.izquierdo    #entonces el derecho del padre = al derecho del hijo
+      elif nodoEliminar.tieneDerecho():                 # en este caso el hijo solo tiene derecho (tiene un solo hijo)
+        if lado == "izq":                               #si esta a la izquierda del padre 
+          nodoPadre.izquierdo = nodoEliminar.derecho    #el que esta a la izquierdo del padre, va ser el derecho del hijo 
+        else:                                           #si esta a la derecha del padre
+          nodoPadre.derecho = nodoEliminar.derecho      #el derecho del padre , va ser el derecho del hijo
+      else:                                             #este el caso que el nodo que quiero eliminar no tiene nigun hijo
+        if lado == "izq":                               #si el lado es el izquierdo
+          nodoPadre.izquierdo = None                    #pongo a none el hijo izquierdo
+        else:
+          nodoPadre.derecho = None                      #pongo a none el hijo derecho
+
+
   def mostrarLista(self):
     print(self.listaWeb)
 
@@ -230,7 +282,7 @@ class NodoArbol:
 class ArbolBuscador:
   def __init__(self):
     self.raiz = None
-    
+     
     
   def estaVacio(self):
     return self.raiz == None
@@ -332,6 +384,24 @@ class ArbolBuscador:
     return estaDato
 
 
+  def eliminar(self, dato): # viene por parametro el dato a borrar
+    if not self.estaVacio():              # se valida que el arbol no esta vacio
+      if dato == self.raiz.dato:          #primero se resuelven los casos particulares , si el elemento que quiero eliminar  esta en la raiz (dato == self.raiz.dato)
+        if self.raiz.grado() == 2:        # si tiene grado 2, o sea que tiene dos hijos (izq y der)
+          nodoPred = self.raiz.predecesor()         #primero buscamos el predecesor y lo guardamos en una variable aux la cual quedara apuntando al predecesor aún despues de que lo eliminé
+          self.eliminar(nodoPred.dato)              #eliminamos el predecesor llamando a la funcion de eliminar y pasando el dato por parametro
+          nodoPred.izquierdo = self.raiz.izquierdo  #entonces ahora apunto el izquierdo al que era el hijo izquierdo de la raiz, (donde apuntaba antes la raiz)
+          nodoPred.derecho = self.raiz.derecho      #y tambien apunto el derecho al que era el hijo derecho de la raiz, (donde apuntaba antes la raiz)
+          self.raiz = nodoPred                      # y por ultimo ahora mi raiz, pasa a ser el nodo predecesor
+        elif self.raiz.tieneIzquierdo():  # tiene grado uno, y aqui solo tiene izquierdo o sea un solo hijo
+          self.raiz = self.raiz.izquierdo # por lo tanto hay que reemplazar directamente al nodo por su hijo (en este caso izquierdo que es el unico que tiene), el nodo raiz apunta ahora a su hijo izquierdo y ya queda eliminado el que queriamos
+        elif self.raiz.tieneDerecho():    # tiene grado uno, y aqui solo tiene derecho
+          self.raiz = self.raiz.derecho   # se hace lo mismo que las lineas de arriba pero en este caso es reemplazado directamente por su hijo derecho, el nodo raiz apunta ahora a su hijo derecho
+        else:                             #en este caso no tiene hijos, 
+          self.raiz = None                #asi que ahora el nodo raiz apunta a None
+      else:                 # Ahora se resuleve el caso en que el dato a borrar no este en la raiz, por eso entonces
+        self.raiz.eliminar(dato) # si no es el dato de raiz, llamamos a la funcion eliminar del tipo nodo
+      
 
   #funcion para salida-graficar arbol
   def treePlot(self, fileName='representacionAbolEjemplo'):
