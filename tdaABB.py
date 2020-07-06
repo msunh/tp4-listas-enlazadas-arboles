@@ -24,8 +24,10 @@ class NodoArbol:
   def tieneDerecho(self):
     return self.derecho != None 
 
+  def getListaWeb(self):
+    return self.listaWeb      
 
-    #cantidad de hojas
+  #cantidad de hojas
   def cantHojas(self):
 
     cantHojas = 0
@@ -42,43 +44,6 @@ class NodoArbol:
     return cantHojas  
     
     
-  #insertar dato del nodoArbol
-
-  def insertar(self, nuevoNodo , direccionWeb):
-    if self.dato == nuevoNodo.dato:
-      # print("La palabra ya se encuentra en el arbol")
-      
-      if not self.listaWeb.estaEnLista(direccionWeb):
-        self.listaWeb.append(direccionWeb)
-
-    elif nuevoNodo.dato < self.dato: 
-
-      if self.tieneIzquierdo():
-        self.izquierdo.insertar(nuevoNodo,direccionWeb)
-      else:
-        self.izquierdo = nuevoNodo
-
-    else:
-      if self.tieneDerecho():
-        self.derecho.insertar(nuevoNodo,direccionWeb)
-      else:
-        self.derecho = nuevoNodo  
-
-  
-  #buscar palabra del nodoArbol
-  def buscarPalabra(self,palabra):
-      listaDePalabrasAux = Lista()
-      
-      if self.dato == palabra :
-        listaDePalabrasAux = self.listaWeb
-      elif self.dato > palabra:
-        if self.tieneIzquierdo():
-          listaDePalabrasAux = self.izquierdo.buscarPalabra(palabra)
-      else:
-        if self.tieneDerecho():
-          listaDePalabrasAux = self.derecho.buscarPalabra(palabra)
-          
-      return listaDePalabrasAux
 
   #grado del nodoArbol
 
@@ -223,13 +188,63 @@ class NodoArbol:
           nodoHijo, nodoPadre, lado = self.derecho.buscaPadre(dato) #si no es el que yo quiero , lo mando a buscar al lado derecho
     return nodoHijo, nodoPadre, lado
 
+    #insertar dato del nodoArbol
 
-  def eliminar(self, dato):      #funcion eliminar del nodo
+  def insertar(self, nuevoNodo , direccionWeb):
+    if self.dato == nuevoNodo.dato:
+      # print("La palabra ya se encuentra en el arbol")
+      
+      if not self.listaWeb.estaEnLista(direccionWeb):
+        self.listaWeb.append(direccionWeb)
+
+    elif nuevoNodo.dato < self.dato: 
+
+      if self.tieneIzquierdo():
+        self.izquierdo.insertar(nuevoNodo,direccionWeb)
+      else:
+        self.izquierdo = nuevoNodo
+
+    else:
+      if self.tieneDerecho():
+        self.derecho.insertar(nuevoNodo,direccionWeb)
+      else:
+        self.derecho = nuevoNodo  
+
+  
+  #buscar palabra del nodoArbol
+  def buscarPalabra(self,palabra):
+      listaDePalabrasAux = Lista()
+      
+      if self.dato == palabra :
+        listaDePalabrasAux = self.listaWeb
+      elif self.dato > palabra:
+        if self.tieneIzquierdo():
+          listaDePalabrasAux = self.izquierdo.buscarPalabra(palabra)
+      else:
+        if self.tieneDerecho():
+          listaDePalabrasAux = self.derecho.buscarPalabra(palabra)
+          
+      return listaDePalabrasAux
+
+  def palabrasDePagina(self, direccionWeb,listaDePalabras):
+
+      if self.listaWeb.estaEnLista(direccionWeb):
+        listaDePalabras.append(self.dato)
+
+      if self.tieneDerecho():
+        self.derecho.palabrasDePagina(direccionWeb, listaDePalabras)    
+
+      if self.tieneIzquierdo():
+        self.izquierdo.palabrasDePagina(direccionWeb, listaDePalabras)  
+
+
+
+  def eliminarPalabra(self, dato):      #funcion eliminar del nodo
     nodoEliminar, nodoPadre, lado = self.buscaPadre(dato)  ##lado = "izq" / "der" - funcion que me "busca" y me retorna 3 cosas , un puntero al padre, un puntero al nodo y de que lado del padre esta ese nodo
     if nodoEliminar != None:            #si es distinto de none, si encontró el dato en el arbol
       if nodoEliminar.grado() == 2:                      #este es el caso si tiene dos hijos
         nodoPred = nodoEliminar.predecesor()             #primero buscamos al predecesor del nodo eliminar, ahi tengo un puntero al nodo que quiero eliminar
-        self.eliminar(nodoPred.dato)                     #ahora elimino al predecesor con la misma funcion (elDatoQQueesta en elpredecesor) es el parametro
+        self.eliminarPalabra(nodoPred.dato)                     #ahora elimino al predecesor con la misma funcion (elDatoQQueesta en elpredecesor) es el parametro
         nodoPred.izquierdo = nodoEliminar.izquierdo      #los hijos del nodo predecesor son los que eran los hijos del nodo a eliminar tanto izquierdo
         nodoPred.derecho = nodoEliminar.derecho          #como derecho
         if lado == "izq":                                #ahora tengo que poner al nodo predecesor como hijo del nodo padre dependiendo del lado, si es lado izq
@@ -252,9 +267,27 @@ class NodoArbol:
         else:
           nodoPadre.derecho = None                      #pongo a none el hijo derecho
 
+  #eliminarPaginaNodo
 
-  def mostrarLista(self):
-    print(self.listaWeb)
+  
+  def eliminarPagina(self, direccionWeb, palabrasSinWeb):
+    
+      
+
+      if self.listaWeb.estaEnLista(direccionWeb):  
+        
+        self.listaWeb.eliminar(self.listaWeb.posicionEnLista(direccionWeb))
+        if self.listaWeb.estaVacia():
+          palabrasSinWeb.append(self.dato)
+
+
+      if self.tieneDerecho() :
+         self.derecho.eliminarPagina(direccionWeb, palabrasSinWeb)
+
+      if self.tieneIzquierdo() :
+         self.izquierdo.eliminarPagina(direccionWeb, palabrasSinWeb)
+    
+
 
 
 
@@ -276,12 +309,21 @@ class NodoArbol:
           dot.edge(str(self.dato), "None"+str(self.dato)+"r")
 
 
-################################ A R B O L
+
+
+
+
+
+
+
+
+################################                         A R B O L
 
 
 class ArbolBuscador:
   def __init__(self):
     self.raiz = None
+    
      
     
   def estaVacio(self):
@@ -304,47 +346,6 @@ class ArbolBuscador:
       self.raiz.postOrden()
     else:
       print("Arbol vacio.")
-
- 
-  def insertarPalabra(self, dato, direccionWeb):
-    nuevoNodo = NodoArbol(dato, direccionWeb)
-    if self.estaVacio():
-      self.raiz = nuevoNodo
-    else:
-        self.raiz.insertar(nuevoNodo,direccionWeb)
-
-  #recibe por parametro una lista de palabras con una direccion web en comun
-  def insertarPagina(self, listaDePalabras, direccionWeb):
-    
-    if not listaDePalabras.estaVacia():
-      cont = 0
-      while cont < listaDePalabras.len() :    
-        self.insertarPalabra(listaDePalabras.getDato(cont), direccionWeb)
-        cont += 1
-
-  #recibe una lista de palabras y devuelve todas las paginas web  en donde estan
-  def buscarPalabras(self,listaDePalabras):
-    listaWeb = Lista()
-    cont = 0
-
-    if not listaDePalabras.estaVacia():
-      while cont < listaDePalabras.len():
-        listaWeb.unirListas(self.raiz.buscarPalabra(listaDePalabras.getDato(cont)))
-        cont +=1
-
-    listaWebClon = listaWeb.clonar()
-    listaWeb.vaciarLista()
-    pos = 0
-
-    while pos < listaWebClon.len():
-          
-      if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
-        listaWeb.append(listaWebClon.getDato(pos))
-      pos +=1
-
-    return listaWeb 
-  
-  
 
   def cantHojas(self):
     cant = 0 
@@ -382,14 +383,63 @@ class ArbolBuscador:
     if not self.estaVacio():
       estaDato = self.raiz.buscar(dato) != None
     return estaDato
+ 
+  #requerimientos
+
+  def insertarPalabra(self, dato, direccionWeb):
+    nuevoNodo = NodoArbol(dato, direccionWeb)
+    if self.estaVacio():
+      self.raiz = nuevoNodo
+    else:
+        self.raiz.insertar(nuevoNodo,direccionWeb)
+
+  #recibe por parametro una lista de palabras con una direccion web en comun
+  def insertarPagina(self, listaDePalabras, direccionWeb):
+    
+    if not listaDePalabras.estaVacia():
+      cont = 0
+      while cont < listaDePalabras.len() :    
+        self.insertarPalabra(listaDePalabras.getDato(cont), direccionWeb)
+        cont += 1
+
+  #recibe una lista de palabras y devuelve todas las paginas web  en donde estan
+  def buscarPalabras(self,listaDePalabras):
+    listaWeb = Lista()
+    cont = 0
+
+    if not listaDePalabras.estaVacia():
+      while cont < listaDePalabras.len():
+        listaWeb.unirListas(self.raiz.buscarPalabra(listaDePalabras.getDato(cont))) #llama al buscar palabra de nodo
+        cont +=1
+
+    listaWebClon = listaWeb.clonar()
+    listaWeb.vaciarLista()
+    pos = 0
+
+    while pos < listaWebClon.len():
+          
+      if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
+        listaWeb.append(listaWebClon.getDato(pos))
+      pos +=1
+
+    return listaWeb 
 
 
-  def eliminar(self, dato): # viene por parametro el dato a borrar
+  def palabrasDePagina(self,direccionWeb): #palabra de pagina de ARBOL
+    listaDePalabras = Lista()    
+
+    if not self.estaVacio():
+      self.raiz.palabrasDePagina(direccionWeb, listaDePalabras)
+
+    return listaDePalabras  
+
+
+  def eliminarPalabra(self, dato): # viene por parametro el dato a borrar
     if not self.estaVacio():              # se valida que el arbol no esta vacio
       if dato == self.raiz.dato:          #primero se resuelven los casos particulares , si el elemento que quiero eliminar  esta en la raiz (dato == self.raiz.dato)
         if self.raiz.grado() == 2:        # si tiene grado 2, o sea que tiene dos hijos (izq y der)
           nodoPred = self.raiz.predecesor()         #primero buscamos el predecesor y lo guardamos en una variable aux la cual quedara apuntando al predecesor aún despues de que lo eliminé
-          self.eliminar(nodoPred.dato)              #eliminamos el predecesor llamando a la funcion de eliminar y pasando el dato por parametro
+          self.eliminarPalabra(nodoPred.dato)              #eliminamos el predecesor llamando a la funcion de eliminar y pasando el dato por parametro
           nodoPred.izquierdo = self.raiz.izquierdo  #entonces ahora apunto el izquierdo al que era el hijo izquierdo de la raiz, (donde apuntaba antes la raiz)
           nodoPred.derecho = self.raiz.derecho      #y tambien apunto el derecho al que era el hijo derecho de la raiz, (donde apuntaba antes la raiz)
           self.raiz = nodoPred                      # y por ultimo ahora mi raiz, pasa a ser el nodo predecesor
@@ -400,8 +450,25 @@ class ArbolBuscador:
         else:                             #en este caso no tiene hijos, 
           self.raiz = None                #asi que ahora el nodo raiz apunta a None
       else:                 # Ahora se resuleve el caso en que el dato a borrar no este en la raiz, por eso entonces
-        self.raiz.eliminar(dato) # si no es el dato de raiz, llamamos a la funcion eliminar del tipo nodo
-      
+        self.raiz.eliminarPalabra(dato) # si no es el dato de raiz, llamamos a la funcion eliminar del tipo nodo
+
+
+  #eliminarPagina de arbol
+
+
+  def eliminarPagina(self, direccionWeb):
+    listaSinWeb = Lista()
+    cont = 0
+
+    if not self.estaVacio():
+      self.raiz.eliminarPagina(direccionWeb, listaSinWeb) 
+
+    
+    while cont < listaSinWeb.len(): #elimina una palabra sin web
+      self.eliminarPalabra(listaSinWeb.getDato(cont))
+      cont +=1   
+ 
+
 
   #funcion para salida-graficar arbol
   def treePlot(self, fileName='representacionAbolEjemplo'):

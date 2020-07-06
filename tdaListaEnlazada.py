@@ -47,11 +47,11 @@ class NodoLista:
     return dato
 
 
-  def delete(self, delPos, actPos = 0):
+  def eliminar(self, delPos, actPos = 0):
     if actPos == delPos-1:
       self.siguiente = self.siguiente.siguiente
     else:
-          self.siguiente.delete(delPos, actPos+1)
+          self.siguiente.eliminar(delPos, actPos+1)
 
 
 
@@ -95,6 +95,18 @@ class NodoLista:
       if self.tieneSiguiente():
         aux = self.siguiente.estaEnLista(dato)
     return aux
+
+  # def estaEnListaPos(self,dato):
+  #   aux = False
+  #   posicion = 0
+  #   if self.dato == dato:
+  #     aux = True      
+  #   else:
+  #     if self.tieneSiguiente():
+  #       aux = self.siguiente.estaEnListaPos(dato)
+  #       posicion += 1
+
+  #   return posicion  
       
 
 
@@ -152,12 +164,14 @@ class Lista:
       raise Exception("Posicion invalida")
 
 
-  def delete(self, pos):
+  #eliminarDeLista    
+
+  def eliminar(self, pos):
     if 0 <= pos < self.len() and not self.estaVacia():
       if pos == 0:
         self.primero = self.primero.siguiente
       else:
-        self.primero.delete(pos)
+        self.primero.eliminar(pos)
     else:
       raise Exception("Posicion invalida")
 
@@ -193,11 +207,25 @@ class Lista:
         cant = self.primero.deleteAll(dato)
     return cant
 
-  def estaEnLista(self,paginaWeb):
+  def estaEnLista(self,direccionWeb):
     aux = False
     if not self.estaVacia():
-      aux = self.primero.estaEnLista(paginaWeb)
+      aux = self.primero.estaEnLista(direccionWeb)
     return aux
+
+
+
+  def posicionEnLista(self,dato):
+    aux = self.primero
+    pos = 0
+
+    while aux.dato != dato:   
+      pos += 1
+      aux = aux.siguiente 
+
+    return pos  
+
+
 
   def unirListas(self,lista):
     aux = lista.primero
@@ -220,8 +248,8 @@ class Lista:
 # lista1.append("carlos.com")
 # lista1.append("carlitos.com")
 
-# print(lista1.estaEnLista("carlitos.com"))
-    
+# print(lista1.posicionEnLista("carlitos.com"))
+
 
   # def deleteAll(self, dato, actPos = 0):
   #   cant = 0

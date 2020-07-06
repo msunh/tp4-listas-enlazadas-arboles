@@ -24,6 +24,8 @@ arbol1.insertarPalabra("estado", "carlitos.com")
 arbol1.insertarPalabra("estado", "marcos.com")
 arbol1.insertarPalabra("radio", "cachito.com")
 arbol1.insertarPalabra("arbolito", "plantas.com")
+arbol1.insertarPalabra("avioncito", "despegar.com")
+
 #arbol1.treePlot()
 #arbol1.raiz.mostrarLista()
 
@@ -31,22 +33,33 @@ arbol1.insertarPalabra("arbolito", "plantas.com")
 listaDePalabras = Lista()
 listaDePalabras.append("perro")
 listaDePalabras.append("juego")
-listaDePalabras.append("radio")
+#listaDePalabras.append("radio")
 listaDePalabras.append("rodado")
 listaDePalabras.append("arbolito")
 
 listaDePalabras2 = Lista()
 listaDePalabras2.append("juego")
-listaDePalabras2.append("estado")
+#listaDePalabras2.append("estado")
 
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
-#arbol1.treePlot()
-print(arbol1.buscarPalabras(listaDePalabras))
+arbol1.treePlot()
+#print(arbol1.buscarPalabras(listaDePalabras))
 #print(arbol1.buscarPalabras(listaDePalabras2))
 print()
-arbol1.eliminar("radio")
+#eliminar palabra
+#arbol1.eliminarPalabra("radio")
+#arbol1.treePlot("eliminado")
+
+#print(arbol1.raiz.getListaWeb())
+
+#palabrasDePagina
+#print(arbol1.palabrasDePagina("cualquiera.com"))
+
+#eliminarWeb
+arbol1.eliminarPagina("cachito.com")
 arbol1.treePlot("eliminado")
+
 
 
 

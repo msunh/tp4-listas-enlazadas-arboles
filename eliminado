@@ -6,8 +6,12 @@ digraph {
 	estado -> arbolito
 	Nonearbolitol [label=None]
 	arbolito -> Nonearbolitol
-	Nonearbolitor [label=None]
-	arbolito -> Nonearbolitor
+	avioncito [label=avioncito]
+	arbolito -> avioncito
+	Noneavioncitol [label=None]
+	avioncito -> Noneavioncitol
+	Noneavioncitor [label=None]
+	avioncito -> Noneavioncitor
 	Noneestador [label=None]
 	estado -> Noneestador
 	perro [label=perro]
