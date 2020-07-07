@@ -18,14 +18,22 @@ digraph {
 	juego -> radio
 	perro [label=perro]
 	radio -> perro
-	Noneperrol [label=None]
-	perro -> Noneperrol
+	mar [label=mar]
+	perro -> mar
+	Nonemarl [label=None]
+	mar -> Nonemarl
+	Nonemarr [label=None]
+	mar -> Nonemarr
 	Noneperror [label=None]
 	perro -> Noneperror
 	rodado [label=rodado]
 	radio -> rodado
 	Nonerodadol [label=None]
 	rodado -> Nonerodadol
-	Nonerodador [label=None]
-	rodado -> Nonerodador
+	tu [label=tu]
+	rodado -> tu
+	Nonetul [label=None]
+	tu -> Nonetul
+	Nonetur [label=None]
+	tu -> Nonetur
 }

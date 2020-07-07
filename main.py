@@ -33,9 +33,11 @@ arbol1.insertarPalabra("avioncito", "despegar.com")
 listaDePalabras = Lista()
 listaDePalabras.append("perro")
 listaDePalabras.append("juego")
-#listaDePalabras.append("radio")
+listaDePalabras.append("radio")
 listaDePalabras.append("rodado")
 listaDePalabras.append("arbolito")
+listaDePalabras.append("mar")
+listaDePalabras.append("tu")
 
 listaDePalabras2 = Lista()
 listaDePalabras2.append("juego")
@@ -57,8 +59,10 @@ print()
 #print(arbol1.palabrasDePagina("cualquiera.com"))
 
 #eliminarWeb
-arbol1.eliminarPagina("cachito.com")
-arbol1.treePlot("eliminado")
+# arbol1.eliminarPagina("cachito.com")
+# arbol1.treePlot("eliminado")
+
+print(arbol1.cantidadTotalPalabras(9))
 
 
 

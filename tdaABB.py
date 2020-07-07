@@ -271,11 +271,8 @@ class NodoArbol:
 
   
   def eliminarPagina(self, direccionWeb, palabrasSinWeb):
-    
-      
 
       if self.listaWeb.estaEnLista(direccionWeb):  
-        
         self.listaWeb.eliminar(self.listaWeb.posicionEnLista(direccionWeb))
         if self.listaWeb.estaVacia():
           palabrasSinWeb.append(self.dato)
@@ -289,7 +286,23 @@ class NodoArbol:
     
 
 
-
+  def cantidadTotalPalabras(self,cantidadLetras):
+    contador = 0
+    if self.cantidadLetrasDePalabra() >= cantidadLetras:
+      contador+= 1
+    
+    if self.tieneDerecho():
+      contador += self.derecho.cantidadTotalPalabras(cantidadLetras)
+      
+    if self.tieneIzquierdo():
+      contador += self.izquierdo.cantidadTotalPalabras(cantidadLetras)
+      
+    return contador
+  
+  
+  def cantidadLetrasDePalabra(self):
+    return len(self.dato)
+  
 
   #funcion para salida-graficar 
   def treePlot(self, dot):
@@ -469,6 +482,19 @@ class ArbolBuscador:
       cont +=1   
  
 
+  
+  def cantidadTotalPalabras(self,cantidadLetras):
+    aux = 0
+    if not self.estaVacio():
+      aux = self.raiz.cantidadTotalPalabras(cantidadLetras)
+      
+    return aux
+    
+
+
+
+  
+  
 
   #funcion para salida-graficar arbol
   def treePlot(self, fileName='representacionAbolEjemplo'):
