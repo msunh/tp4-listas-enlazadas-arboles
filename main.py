@@ -45,7 +45,7 @@ listaDePalabras2.append("juego")
 
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
-arbol1.treePlot()
+#arbol1.treePlot()
 #print(arbol1.buscarPalabras(listaDePalabras))
 #print(arbol1.buscarPalabras(listaDePalabras2))
 print()
@@ -62,7 +62,12 @@ print()
 # arbol1.eliminarPagina("cachito.com")
 # arbol1.treePlot("eliminado")
 
-print(arbol1.cantidadTotalPalabras(9))
+#print(arbol1.cantidadTotalPalabras(9))
+print("el arbol esta balanceado?: ", arbol1.estaBalanceado())
+#arbol1.treePlot()
+print()
+print(arbol1.paginasEnNivel(3))
+print()
 
 
 

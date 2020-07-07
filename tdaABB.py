@@ -55,7 +55,7 @@ class NodoArbol:
       grado += 1
     return grado
 
-  #altura
+  #altura del arbol en nodo
 
   def altura(self):
     altura = 0
@@ -67,15 +67,7 @@ class NodoArbol:
       altura = 1 + self.derecho.altura()
     return altura
 
-  #nivel a lista
-  def nivelALista(self, nivel, listaNivel, nivelNodo = 0):
-    if nivelNodo == nivel:
-      listaNivel.append(self.dato)
-    else:
-      if self.tieneDerecho():
-        self.derecho.nivelALista(nivel, listaNivel, nivelNodo+1)
-      if self.tieneIzquierdo():
-        self.izquierdo.nivelALista(nivel, listaNivel, nivelNodo+1)
+       
 
   #recorrido pre-orden
   def preOrden(self):
@@ -304,6 +296,59 @@ class NodoArbol:
     return len(self.dato)
   
 
+  #funcion de esta balanceado
+  def estaBalanceado(self):
+    alturaDerecho = 0
+    alturaIzquierdo = 0
+    
+
+    if self.tieneDerecho():
+      alturaDerecho = self.derecho.altura()
+
+    if self.tieneIzquierdo():
+      alturaIzquierdo = self.izquierdo.altura()  
+
+    
+    return alturaDerecho, alturaIzquierdo
+
+
+
+  
+  #nivel a lista de nodo
+  def nivelALista(self, nivel, listaNivel, nivelNodo = 0):
+    if nivelNodo == nivel:
+      listaNivel.append(self.dato)
+    else:
+      if self.tieneDerecho():
+        self.derecho.nivelALista(nivel, listaNivel, nivelNodo+1)
+      if self.tieneIzquierdo():
+        self.izquierdo.nivelALista(nivel, listaNivel, nivelNodo+1)
+
+
+
+  def paginasEnNivel(self,nivel,listaNivelWeb, nivelNodo = 0):
+    if nivelNodo == nivel:
+      if self.dato != None:
+        listaNivelWeb.append(self.listaWeb)  
+    else:
+      if self.tieneDerecho():
+        self.derecho.paginasEnNivel(nivel, listaNivelWeb, nivelNodo+1)
+      if self.tieneIzquierdo():
+        self.izquierdo.paginasEnNivel(nivel, listaNivelWeb, nivelNodo+1) 
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
   #funcion para salida-graficar 
   def treePlot(self, dot):
       if self.tieneIzquierdo():
@@ -384,11 +429,7 @@ class ArbolBuscador:
       prof = self.raiz.altura()
     return prof
 
-  def nivelALista(self, nivel):
-    listaNivel = []
-    if not self.estaVacio():
-      self.raiz.nivelALista(nivel, listaNivel)
-    return listaNivel
+   
 
   #Recibe un elemento y retorna *True* si el elemento esta en el árbol y *False* en caso contrario.
   def buscar(self, dato):
@@ -482,18 +523,65 @@ class ArbolBuscador:
       cont +=1   
  
 
-  
+  #funcion aux
   def cantidadTotalPalabras(self,cantidadLetras):
     aux = 0
     if not self.estaVacio():
       aux = self.raiz.cantidadTotalPalabras(cantidadLetras)
       
     return aux
-    
 
 
+  #funcion Esta Balanceado de Arbol
+  def estaBalanceado(self):
+    balanceado = False
+    derecho = 0
+    izquierdo = 0 
 
+    if not self.estaVacio():
+      derecho, izquierdo = self.raiz.estaBalanceado()  
+
+    if ((derecho - izquierdo) <= 1) and ((derecho - izquierdo) >= -1):
+      balanceado = True
+
+    return balanceado
   
+  def nivelALista(self, nivel):
+    listaNivel = []
+
+    if not self.estaVacio():
+      self.raiz.nivelALista(nivel, listaNivel)
+
+    return listaNivel
+
+
+  def paginasEnNivel(self, nivel):
+    listaNivel = Lista()
+
+    if not self.estaVacio():
+      self.raiz.paginasEnNivel(nivel, listaNivel)
+
+    listaNivelClonada = listaNivel.clonar()
+    listaNivel.vaciarLista()
+    pos = 0
+
+    while pos < listaNivelClonada.len():
+
+      if listaNivelClonada.cantWebRepetidasEnLista(listaNivelClonada.getDato(pos)) >=2 and not listaNivel.estaEnLista(listaNivelClonada.getDato(pos)):
+        listaNivel.append(listaNivelClonada.getDato(pos))
+      pos +=1  
+
+
+    return listaNivel 
+
+
+
+
+
+
+
+
+        
   
 
   #funcion para salida-graficar arbol
