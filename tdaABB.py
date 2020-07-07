@@ -327,9 +327,12 @@ class NodoArbol:
 
 
   def paginasEnNivel(self,nivel,listaNivelWeb, nivelNodo = 0):
+    pos = 0
     if nivelNodo == nivel:
       if self.dato != None:
-        listaNivelWeb.append(self.listaWeb)  
+        while pos < self.listaWeb.len():
+          listaNivelWeb.append(self.listaWeb.getDato(pos))
+          pos +=1  
     else:
       if self.tieneDerecho():
         self.derecho.paginasEnNivel(nivel, listaNivelWeb, nivelNodo+1)
@@ -338,16 +341,56 @@ class NodoArbol:
   
 
 
+  def cantidadPalabrasMasUsadas(self,cantidadPaginas):
+    cantidadPalabras = 0
+    
+    if self.listaWeb.len() >= cantidadPaginas :
+      cantidadPalabras +=1
+      
+    if self.tieneDerecho():
+      cantidadPalabras += self.derecho.cantidadPalabrasMasUsadas(cantidadPaginas)
+      
+    if self.tieneIzquierdo():
+      cantidadPalabras += self.izquierdo.cantidadPalabrasMasUsadas(cantidadPaginas)
+    
+    return cantidadPalabras
+    
+    
+  # def internasMayusculaAlfabetico(self):
+  #   listaPalabrasMayus = Lista()
+    
+  #   if self.tieneIzquierdo():
+  #     self.izquierdo.internasMayusculaAlfabetico()
+         
+  #   if self.tieneMayuscula():
+  #     listaPalabrasMayus.append(self.dato)
 
-
-
-
-
-
-
-
+  #   if self.tieneDerecho():
+  #     self.derecho.internasMayusculaAlfabetico()
+    
+  #   return listaPalabrasMayus
   
   
+  def internasMayusculaAlfabetico(self,listaPalabras):
+    listaPalabras = Lista()
+    
+    if not self.esHoja() and self.tieneMayuscula():
+      listaPalabras.append(self.dato)
+      print("hola")
+      
+    if self.tieneDerecho():
+      listaPalabras = self.derecho.internasMayusculaAlfabetico(listaPalabras)
+      
+    if self.tieneIzquierdo():
+      listaPalabras = self.izquierdo.internasMayusculaAlfabetico(listaPalabras)
+      
+    return listaPalabras
+      
+    
+  def tieneMayuscula(self):
+    return not self.dato.islower()
+    
+    
 
   #funcion para salida-graficar 
   def treePlot(self, dot):
@@ -475,6 +518,12 @@ class ArbolBuscador:
       if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
         listaWeb.append(listaWebClon.getDato(pos))
       pos +=1
+      
+      # while pos < listaWebClon.len():
+          
+      # if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
+      #   listaWeb.append(listaWebClon.getDato(pos))
+      # pos +=1
 
     return listaWeb 
 
@@ -564,10 +613,9 @@ class ArbolBuscador:
     listaNivelClonada = listaNivel.clonar()
     listaNivel.vaciarLista()
     pos = 0
-
+    
     while pos < listaNivelClonada.len():
-
-      if listaNivelClonada.cantWebRepetidasEnLista(listaNivelClonada.getDato(pos)) >=2 and not listaNivel.estaEnLista(listaNivelClonada.getDato(pos)):
+      if not listaNivel.estaEnLista(listaNivelClonada.getDato(pos)):
         listaNivel.append(listaNivelClonada.getDato(pos))
       pos +=1  
 
@@ -575,7 +623,24 @@ class ArbolBuscador:
     return listaNivel 
 
 
+  def cantidadPalabrasMasUsadas(self,cantidadPaginas):
+    
+    cantidadPalabras = 0
+    
+    if not self.estaVacio():
+      cantidadPalabras = self.raiz.cantidadPalabrasMasUsadas(cantidadPaginas)
+      
+    return cantidadPalabras
+  
+    
 
+  def internasMayusculaAlfabetico(self):
+    listaPalabras = Lista()
+    
+    if not self.estaVacio():
+      listaPalabras = self.raiz.internasMayusculaAlfabetico(listaPalabras)
+    
+    return listaPalabras
 
 
 

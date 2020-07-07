@@ -1,9 +1,25 @@
 digraph {
 	juego [label=juego]
+	Ataud [label=Ataud]
+	juego -> Ataud
+	NoneAtaudl [label=None]
+	Ataud -> NoneAtaudl
 	estado [label=estado]
-	juego -> estado
+	Ataud -> estado
+	Futbol [label=Futbol]
+	estado -> Futbol
+	Computadora [label=Computadora]
+	Futbol -> Computadora
+	NoneComputadoral [label=None]
+	Computadora -> NoneComputadoral
+	NoneComputadorar [label=None]
+	Computadora -> NoneComputadorar
+	Piloto [label=Piloto]
+	Futbol -> Piloto
+	NonePilotol [label=None]
+	Piloto -> NonePilotol
 	arbolito [label=arbolito]
-	estado -> arbolito
+	Piloto -> arbolito
 	Nonearbolitol [label=None]
 	arbolito -> Nonearbolitol
 	avioncito [label=avioncito]
@@ -16,8 +32,12 @@ digraph {
 	estado -> Noneestador
 	radio [label=radio]
 	juego -> radio
+	libro [label=libro]
+	radio -> libro
+	Nonelibrol [label=None]
+	libro -> Nonelibrol
 	perro [label=perro]
-	radio -> perro
+	libro -> perro
 	mar [label=mar]
 	perro -> mar
 	Nonemarl [label=None]
