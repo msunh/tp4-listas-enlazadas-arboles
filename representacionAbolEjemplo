@@ -1,25 +1,17 @@
 digraph {
 	juego [label=juego]
-	Ataud [label=Ataud]
-	juego -> Ataud
-	NoneAtaudl [label=None]
-	Ataud -> NoneAtaudl
-	estado [label=estado]
-	Ataud -> estado
-	Futbol [label=Futbol]
-	estado -> Futbol
-	Computadora [label=Computadora]
-	Futbol -> Computadora
-	NoneComputadoral [label=None]
-	Computadora -> NoneComputadoral
-	NoneComputadorar [label=None]
-	Computadora -> NoneComputadorar
 	Piloto [label=Piloto]
-	Futbol -> Piloto
-	NonePilotol [label=None]
-	Piloto -> NonePilotol
+	juego -> Piloto
+	Futbol [label=Futbol]
+	Piloto -> Futbol
+	NoneFutboll [label=None]
+	Futbol -> NoneFutboll
+	NoneFutbolr [label=None]
+	Futbol -> NoneFutbolr
+	estado [label=estado]
+	Piloto -> estado
 	arbolito [label=arbolito]
-	Piloto -> arbolito
+	estado -> arbolito
 	Nonearbolitol [label=None]
 	arbolito -> Nonearbolitol
 	avioncito [label=avioncito]
@@ -36,24 +28,8 @@ digraph {
 	radio -> libro
 	Nonelibrol [label=None]
 	libro -> Nonelibrol
-	perro [label=perro]
-	libro -> perro
-	mar [label=mar]
-	perro -> mar
-	Nonemarl [label=None]
-	mar -> Nonemarl
-	Nonemarr [label=None]
-	mar -> Nonemarr
-	Noneperror [label=None]
-	perro -> Noneperror
-	rodado [label=rodado]
-	radio -> rodado
-	Nonerodadol [label=None]
-	rodado -> Nonerodadol
-	tu [label=tu]
-	rodado -> tu
-	Nonetul [label=None]
-	tu -> Nonetul
-	Nonetur [label=None]
-	tu -> Nonetur
+	Nonelibror [label=None]
+	libro -> Nonelibror
+	Noneradior [label=None]
+	radio -> Noneradior
 }

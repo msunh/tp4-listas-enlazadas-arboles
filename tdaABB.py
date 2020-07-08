@@ -1,7 +1,7 @@
 from graphviz import Digraph
 from tdaListaEnlazada import *
 
-###########################   N O D O 
+######################################################   N O D O    A R B O L  
 
 class NodoArbol:
   
@@ -27,26 +27,8 @@ class NodoArbol:
   def getListaWeb(self):
     return self.listaWeb      
 
-  #cantidad de hojas
-  def cantHojas(self):
 
-    cantHojas = 0
-
-    if self.esHoja():
-      cantHojas = 1
-
-    if self.tieneIzquierdo():
-      cantHojas += self.izquierdo.cantHojas()
-
-    if self.tieneDerecho():
-      cantHojas += self.derecho.cantHojas()
-
-    return cantHojas  
-    
-    
-
-  #grado del nodoArbol
-
+  #grado (NODO)
   def grado(self):
     grado = 0
     if self.tieneIzquierdo():
@@ -55,8 +37,7 @@ class NodoArbol:
       grado += 1
     return grado
 
-  #altura del arbol en nodo
-
+  #altura (NODO)
   def altura(self):
     altura = 0
     if self.grado() == 2:
@@ -67,43 +48,8 @@ class NodoArbol:
       altura = 1 + self.derecho.altura()
     return altura
 
-       
 
-  #recorrido pre-orden
-  def preOrden(self):
-        
-    print(self.dato)
-
-    if self.tieneIzquierdo():
-      self.izquierdo.preOrden()
-
-    if self.tieneDerecho():
-      self.derecho.preOrden()
-
-  #recorrido in-orden (devuelve ordenado de menor a mayor)
-  def inOrden(self):
-
-    if self.tieneIzquierdo():
-      self.izquierdo.inOrden()
-
-    print(self.dato)
-
-    if self.tieneDerecho():
-      self.derecho.inOrden()
-    
-  #recorrido post orden
-  def postOrden(self):
-
-    if self.tieneIzquierdo():
-      self.izquierdo.postOrden()
-      
-    if self.tieneDerecho():
-      self.derecho.postOrden()
-
-    print(self.dato)
-
-
-  #busca minimo
+  #busca minimo (NODO)
   def buscaMinimo(self):
     dato = None
     if self.tieneIzquierdo():
@@ -113,7 +59,7 @@ class NodoArbol:
 
     return dato    
 
-  #busca maximo
+  #busca maximo (NODO)
   def buscaMaximo(self):
     dato = None
     if self.tieneDerecho():
@@ -123,7 +69,7 @@ class NodoArbol:
 
     return dato
 
-  #predecesor del Nodo
+  #predecesor (NODO)
   def predecesor(self):
     predecesor = None
     if self.tieneIzquierdo():
@@ -180,7 +126,10 @@ class NodoArbol:
           nodoHijo, nodoPadre, lado = self.derecho.buscaPadre(dato) #si no es el que yo quiero , lo mando a buscar al lado derecho
     return nodoHijo, nodoPadre, lado
 
-    #insertar dato del nodoArbol
+
+
+
+  #insertar dato del nodoArbol
 
   def insertar(self, nuevoNodo , direccionWeb):
     if self.dato == nuevoNodo.dato:
@@ -203,7 +152,7 @@ class NodoArbol:
         self.derecho = nuevoNodo  
 
   
-  #buscar palabra del nodoArbol
+  #buscar palabra (del nodoArbol)
   def buscarPalabra(self,palabra):
       listaDePalabrasAux = Lista()
       
@@ -218,6 +167,7 @@ class NodoArbol:
           
       return listaDePalabrasAux
 
+  #buscar palabra de Pagina (nodo)
   def palabrasDePagina(self, direccionWeb,listaDePalabras):
 
       if self.listaWeb.estaEnLista(direccionWeb):
@@ -259,9 +209,10 @@ class NodoArbol:
         else:
           nodoPadre.derecho = None                      #pongo a none el hijo derecho
 
-  #eliminarPaginaNodo
-
   
+  
+  #eliminarPaginaNodo
+ 
   def eliminarPagina(self, direccionWeb, palabrasSinWeb):
 
       if self.listaWeb.estaEnLista(direccionWeb):  
@@ -277,7 +228,7 @@ class NodoArbol:
          self.izquierdo.eliminarPagina(direccionWeb, palabrasSinWeb)
     
 
-
+  #cantidad total de palabras (de nodo)
   def cantidadTotalPalabras(self,cantidadLetras):
     contador = 0
     if self.cantidadLetrasDePalabra() >= cantidadLetras:
@@ -291,12 +242,12 @@ class NodoArbol:
       
     return contador
   
-  
+  #funcion aux (nodo)
   def cantidadLetrasDePalabra(self):
     return len(self.dato)
   
 
-  #funcion de esta balanceado
+  #funcion de esta balanceado (nodo)
   def estaBalanceado(self):
     alturaDerecho = 0
     alturaIzquierdo = 0
@@ -312,20 +263,7 @@ class NodoArbol:
     return alturaDerecho, alturaIzquierdo
 
 
-
-  
-  #nivel a lista de nodo
-  def nivelALista(self, nivel, listaNivel, nivelNodo = 0):
-    if nivelNodo == nivel:
-      listaNivel.append(self.dato)
-    else:
-      if self.tieneDerecho():
-        self.derecho.nivelALista(nivel, listaNivel, nivelNodo+1)
-      if self.tieneIzquierdo():
-        self.izquierdo.nivelALista(nivel, listaNivel, nivelNodo+1)
-
-
-
+  #paginas En Nivel (nodo)
   def paginasEnNivel(self,nivel,listaNivelWeb, nivelNodo = 0):
     pos = 0
     if nivelNodo == nivel:
@@ -340,7 +278,7 @@ class NodoArbol:
         self.izquierdo.paginasEnNivel(nivel, listaNivelWeb, nivelNodo+1) 
   
 
-
+  #cant de paginas mas usadas (nodo)
   def cantidadPalabrasMasUsadas(self,cantidadPaginas):
     cantidadPalabras = 0
     
@@ -355,44 +293,26 @@ class NodoArbol:
     
     return cantidadPalabras
     
-    
-  # def internasMayusculaAlfabetico(self):
-  #   listaPalabrasMayus = Lista()
-    
-  #   if self.tieneIzquierdo():
-  #     self.izquierdo.internasMayusculaAlfabetico()
-         
-  #   if self.tieneMayuscula():
-  #     listaPalabrasMayus.append(self.dato)
-
-  #   if self.tieneDerecho():
-  #     self.derecho.internasMayusculaAlfabetico()
-    
-  #   return listaPalabrasMayus
-  
-  
+ 
+  #internas mayuscula alfabetico (nodo)  
   def internasMayusculaAlfabetico(self,listaPalabras):
-    listaPalabras = Lista()
+ 
+    if self.tieneIzquierdo():
+      self.izquierdo.internasMayusculaAlfabetico(listaPalabras)
     
     if not self.esHoja() and self.tieneMayuscula():
-      listaPalabras.append(self.dato)
-      print("hola")
+          listaPalabras.append(self.dato)
       
     if self.tieneDerecho():
-      listaPalabras = self.derecho.internasMayusculaAlfabetico(listaPalabras)
-      
-    if self.tieneIzquierdo():
-      listaPalabras = self.izquierdo.internasMayusculaAlfabetico(listaPalabras)
-      
-    return listaPalabras
-      
-    
-  def tieneMayuscula(self):
-    return not self.dato.islower()
-    
-    
+          self.derecho.internasMayusculaAlfabetico(listaPalabras)
 
-  #funcion para salida-graficar 
+      
+  #funcion aux  
+  def tieneMayuscula(self):
+    return self.dato[0].isupper()
+      
+
+  #funcion para salida-graficar (nodo) 
   def treePlot(self, dot):
       if self.tieneIzquierdo():
           dot.node(str(self.izquierdo.dato), str(self.izquierdo.dato))
@@ -411,49 +331,18 @@ class NodoArbol:
 
 
 
-
-
-
-
-
-
-
-################################                         A R B O L
+########################################################   A R B O L
 
 
 class ArbolBuscador:
   def __init__(self):
     self.raiz = None
-    
-     
+ 
     
   def estaVacio(self):
     return self.raiz == None
 
-  def preOrden(self):
-    if not self.estaVacio():
-      self.raiz.preOrden()
-    else:
-      print("Arbol vacio.")
-
-  def inOrden(self):
-    if not self.estaVacio():
-      self.raiz.inOrden()
-    else:
-      print("Arbol vacio.")
-      
-  def postOrden(self):
-    if not self.estaVacio():
-      self.raiz.postOrden()
-    else:
-      print("Arbol vacio.")
-
-  def cantHojas(self):
-    cant = 0 
-    if not self.estaVacio():
-      cant = self.raiz.cantHojas()
-    return cant
-
+  #minimo (arbol)
   def minimo(self):
     minimo = None 
     if not self.estaVacio():
@@ -472,7 +361,6 @@ class ArbolBuscador:
       prof = self.raiz.altura()
     return prof
 
-   
 
   #Recibe un elemento y retorna *True* si el elemento esta en el árbol y *False* en caso contrario.
   def buscar(self, dato):
@@ -481,7 +369,7 @@ class ArbolBuscador:
       estaDato = self.raiz.buscar(dato) != None
     return estaDato
  
-  #requerimientos
+  ########################################## Requerimientos del TP
 
   def insertarPalabra(self, dato, direccionWeb):
     nuevoNodo = NodoArbol(dato, direccionWeb)
@@ -515,20 +403,14 @@ class ArbolBuscador:
 
     while pos < listaWebClon.len():
           
-      if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
+      if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)): #comparo la cantidad de veces que aparece repetida la paginaWeb en la lista clonada con el Len de la lista que recibo por parámetro y si no esta en la lista web clonada la agrega (la primera vez va estar vacia)
         listaWeb.append(listaWebClon.getDato(pos))
       pos +=1
       
-      # while pos < listaWebClon.len():
-          
-      # if listaWebClon.cantWebRepetidasEnLista(listaWebClon.getDato(pos)) == listaDePalabras.len() and not listaWeb.estaEnLista(listaWebClon.getDato(pos)):
-      #   listaWeb.append(listaWebClon.getDato(pos))
-      # pos +=1
+      return listaWeb 
 
-    return listaWeb 
-
-
-  def palabrasDePagina(self,direccionWeb): #palabra de pagina de ARBOL
+  #palabra de pagina (ARBOL)
+  def palabrasDePagina(self,direccionWeb): 
     listaDePalabras = Lista()    
 
     if not self.estaVacio():
@@ -536,7 +418,7 @@ class ArbolBuscador:
 
     return listaDePalabras  
 
-
+  #eliminar palabra (ARBOL)
   def eliminarPalabra(self, dato): # viene por parametro el dato a borrar
     if not self.estaVacio():              # se valida que el arbol no esta vacio
       if dato == self.raiz.dato:          #primero se resuelven los casos particulares , si el elemento que quiero eliminar  esta en la raiz (dato == self.raiz.dato)
@@ -556,9 +438,7 @@ class ArbolBuscador:
         self.raiz.eliminarPalabra(dato) # si no es el dato de raiz, llamamos a la funcion eliminar del tipo nodo
 
 
-  #eliminarPagina de arbol
-
-
+  #eliminarPagina (ARBOL)
   def eliminarPagina(self, direccionWeb):
     listaSinWeb = Lista()
     cont = 0
@@ -572,7 +452,7 @@ class ArbolBuscador:
       cont +=1   
  
 
-  #funcion aux
+  #cantidad todal palabras (ARBOL)
   def cantidadTotalPalabras(self,cantidadLetras):
     aux = 0
     if not self.estaVacio():
@@ -581,7 +461,7 @@ class ArbolBuscador:
     return aux
 
 
-  #funcion Esta Balanceado de Arbol
+  #esta Balanceado (ARBOL)
   def estaBalanceado(self):
     balanceado = False
     derecho = 0
@@ -595,15 +475,7 @@ class ArbolBuscador:
 
     return balanceado
   
-  def nivelALista(self, nivel):
-    listaNivel = []
-
-    if not self.estaVacio():
-      self.raiz.nivelALista(nivel, listaNivel)
-
-    return listaNivel
-
-
+  #paginas en nivel (ARBOL)
   def paginasEnNivel(self, nivel):
     listaNivel = Lista()
 
@@ -619,10 +491,10 @@ class ArbolBuscador:
         listaNivel.append(listaNivelClonada.getDato(pos))
       pos +=1  
 
-
     return listaNivel 
 
 
+  #cantidad Palabras Mas Usadas (ARBOL)
   def cantidadPalabrasMasUsadas(self,cantidadPaginas):
     
     cantidadPalabras = 0
@@ -633,23 +505,17 @@ class ArbolBuscador:
     return cantidadPalabras
   
     
-
+  #internas Mayusculas en orden Alfabetico (ARBOL)
   def internasMayusculaAlfabetico(self):
     listaPalabras = Lista()
     
     if not self.estaVacio():
-      listaPalabras = self.raiz.internasMayusculaAlfabetico(listaPalabras)
+      self.raiz.internasMayusculaAlfabetico(listaPalabras)
     
     return listaPalabras
 
 
-
-
-
-        
-  
-
-  #funcion para salida-graficar arbol
+  #funcion para salida-graficar (ARBOL)
   def treePlot(self, fileName='representacionAbolEjemplo'):
     if not self.estaVacio():
       treeDot = Digraph()

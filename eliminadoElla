@@ -26,20 +26,24 @@ digraph {
 	avioncito -> Noneavioncitor
 	Noneestador [label=None]
 	estado -> Noneestador
-	perro [label=perro]
-	juego -> perro
+	radio [label=radio]
+	juego -> radio
 	libro [label=libro]
-	perro -> libro
+	radio -> libro
 	Nonelibrol [label=None]
 	libro -> Nonelibrol
+	perro [label=perro]
+	libro -> perro
 	mar [label=mar]
-	libro -> mar
+	perro -> mar
 	Nonemarl [label=None]
 	mar -> Nonemarl
 	Nonemarr [label=None]
 	mar -> Nonemarr
+	Noneperror [label=None]
+	perro -> Noneperror
 	rodado [label=rodado]
-	perro -> rodado
+	radio -> rodado
 	Nonerodadol [label=None]
 	rodado -> Nonerodadol
 	tu [label=tu]

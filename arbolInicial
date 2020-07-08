@@ -22,24 +22,36 @@ digraph {
 	arbolito -> avioncito
 	Noneavioncitol [label=None]
 	avioncito -> Noneavioncitol
-	Noneavioncitor [label=None]
-	avioncito -> Noneavioncitor
+	ella [label=ella]
+	avioncito -> ella
+	Noneellal [label=None]
+	ella -> Noneellal
+	Noneellar [label=None]
+	ella -> Noneellar
 	Noneestador [label=None]
 	estado -> Noneestador
-	perro [label=perro]
-	juego -> perro
+	radio [label=radio]
+	juego -> radio
 	libro [label=libro]
-	perro -> libro
+	radio -> libro
 	Nonelibrol [label=None]
 	libro -> Nonelibrol
+	otorrinolaringolo [label=otorrinolaringolo]
+	libro -> otorrinolaringolo
 	mar [label=mar]
-	libro -> mar
+	otorrinolaringolo -> mar
 	Nonemarl [label=None]
 	mar -> Nonemarl
 	Nonemarr [label=None]
 	mar -> Nonemarr
+	perro [label=perro]
+	otorrinolaringolo -> perro
+	Noneperrol [label=None]
+	perro -> Noneperrol
+	Noneperror [label=None]
+	perro -> Noneperror
 	rodado [label=rodado]
-	perro -> rodado
+	radio -> rodado
 	Nonerodadol [label=None]
 	rodado -> Nonerodadol
 	tu [label=tu]
