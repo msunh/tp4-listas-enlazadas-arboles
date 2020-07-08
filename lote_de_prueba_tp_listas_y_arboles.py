@@ -14,26 +14,26 @@ class NodoArbolBuscador(NodoArbol):
 
   def treePlot(self, dot):
     if self.tieneIzquierdo():
-      dot.node(str(self.izquierdo.palabra), str(self.izquierdo.palabra)+'\n'+str(self.izquierdo.paginas))
-      dot.edge(str(self.palabra), str(self.izquierdo.palabra))
+      dot.node(str(self.izquierdo.dato), str(self.izquierdo.dato)+'\n'+str(self.izquierdo.listaWeb))
+      dot.edge(str(self.dato), str(self.izquierdo.dato))
       self.izquierdo.treePlot(dot)
     else:
-      dot.node("None"+str(self.palabra)+"l", "None")
-      dot.edge(str(self.palabra), "None"+str(self.palabra)+"l")
+      dot.node("None"+str(self.dato)+"l", "None")
+      dot.edge(str(self.dato), "None"+str(self.dato)+"l")
     if self.tieneDerecho():
-      dot.node(str(self.derecho.palabra), str(self.derecho.palabra)+'\n'+str(self.derecho.paginas))
-      dot.edge(str(self.palabra), str(self.derecho.palabra))
+      dot.node(str(self.derecho.dato), str(self.derecho.dato)+'\n'+str(self.derecho.listaWeb))
+      dot.edge(str(self.dato), str(self.derecho.dato))
       self.derecho.treePlot(dot)
     else:
-      dot.node("None"+str(self.palabra)+"r", "None")
-      dot.edge(str(self.palabra), "None"+str(self.palabra)+"r")
+      dot.node("None"+str(self.dato)+"r", "None")
+      dot.edge(str(self.dato), "None"+str(self.dato)+"r")
 
 class ArbolBuscador(ArbolBuscador):
   
   def treePlot(self, fileName='tree'):
     if not self.estaVacio():
       treeDot = Digraph()
-      treeDot.node(str(self.raiz.palabra), str(self.raiz.palabra)+'\n'+str(self.raiz.paginas))
+      treeDot.node(str(self.raiz.dato), str(self.raiz.dato)+'\n'+str(self.raiz.listaWeb))
       self.raiz.treePlot(treeDot)
       treeDot.render(fileName, view=True)
 
@@ -43,6 +43,10 @@ class ArbolBuscador(ArbolBuscador):
 
 ################################################################################
 #############CARGA DE ARBOL Y GENERACION DE VARIABLES PARA LA PRUEBA############
+
+
+
+
 
 archivoPalabras = open("palabras_paginas_lote_de_prueba.csv")
 

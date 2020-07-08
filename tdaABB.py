@@ -312,22 +312,39 @@ class NodoArbol:
     return self.dato[0].isupper()
       
 
-  #funcion para salida-graficar (nodo) 
+  #funcion para salida-graficar (nodo) ORIGINAL 
+  # def treePlot(self, dot):
+  #     if self.tieneIzquierdo():
+  #         dot.node(str(self.izquierdo.dato), str(self.izquierdo.dato))
+  #         dot.edge(str(self.dato), str(self.izquierdo.dato))
+  #         self.izquierdo.treePlot(dot)
+  #     else:
+  #         dot.node("None"+str(self.dato)+"l", "None")
+  #         dot.edge(str(self.dato), "None"+str(self.dato)+"l")
+  #     if self.tieneDerecho():
+  #         dot.node(str(self.derecho.dato), str(self.derecho.dato))
+  #         dot.edge(str(self.dato), str(self.derecho.dato))
+  #         self.derecho.treePlot(dot)
+  #     else:
+  #         dot.node("None"+str(self.dato)+"r", "None")
+  #         dot.edge(str(self.dato), "None"+str(self.dato)+"r")
+  
+  
   def treePlot(self, dot):
-      if self.tieneIzquierdo():
-          dot.node(str(self.izquierdo.dato), str(self.izquierdo.dato))
-          dot.edge(str(self.dato), str(self.izquierdo.dato))
-          self.izquierdo.treePlot(dot)
-      else:
-          dot.node("None"+str(self.dato)+"l", "None")
-          dot.edge(str(self.dato), "None"+str(self.dato)+"l")
-      if self.tieneDerecho():
-          dot.node(str(self.derecho.dato), str(self.derecho.dato))
-          dot.edge(str(self.dato), str(self.derecho.dato))
-          self.derecho.treePlot(dot)
-      else:
-          dot.node("None"+str(self.dato)+"r", "None")
-          dot.edge(str(self.dato), "None"+str(self.dato)+"r")
+    if self.tieneIzquierdo():
+      dot.node(str(self.izquierdo.dato), str(self.izquierdo.dato)+'\n'+str(self.izquierdo.listaWeb))
+      dot.edge(str(self.dato), str(self.izquierdo.dato))
+      self.izquierdo.treePlot(dot)
+    else:
+      dot.node("None"+str(self.dato)+"l", "None")
+      dot.edge(str(self.dato), "None"+str(self.dato)+"l")
+    if self.tieneDerecho():
+      dot.node(str(self.derecho.dato), str(self.derecho.dato)+'\n'+str(self.derecho.listaWeb))
+      dot.edge(str(self.dato), str(self.derecho.dato))
+      self.derecho.treePlot(dot)
+    else:
+      dot.node("None"+str(self.dato)+"r", "None")
+      dot.edge(str(self.dato), "None"+str(self.dato)+"r")
 
 
 
@@ -515,13 +532,19 @@ class ArbolBuscador:
     return listaPalabras
 
 
-  #funcion para salida-graficar (ARBOL)
-  def treePlot(self, fileName='representacionAbolEjemplo'):
+  #funcion para salida-graficar (ARBOL)  ORIGINAL
+  # def treePlot(self, fileName='representacionAbolEjemplo'):
+  #   if not self.estaVacio():
+  #     treeDot = Digraph()
+  #     treeDot.node(str(self.raiz.dato), str(self.raiz.dato))
+  #     self.raiz.treePlot(treeDot)
+  #     treeDot.render(fileName, view=True)
+
+
+  def treePlot(self, fileName='tree'):
     if not self.estaVacio():
       treeDot = Digraph()
-      treeDot.node(str(self.raiz.dato), str(self.raiz.dato))
+      treeDot.node(str(self.raiz.dato), str(self.raiz.dato)+'\n'+str(self.raiz.listaWeb))
       self.raiz.treePlot(treeDot)
       treeDot.render(fileName, view=True)
 
-
-      

@@ -73,12 +73,12 @@ class Lista:
     return self.primero == None
 
   def __repr__(self):
-    out = "primero"
+    out = "["
     aux = self.primero
     while aux != None:
-      out += " -> " + str(aux.dato)
+      out += " , " + str(aux.dato)
       aux = aux.siguiente
-    out += " -|"
+    out += "]"
     return out
 
   def vaciarLista(self):

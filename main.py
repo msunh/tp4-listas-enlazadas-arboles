@@ -3,18 +3,6 @@ from tdaListaEnlazada import *
 
 
 
-# arbol1 = ABB([30,20,70,25,55,6,75])
-# arbol1.treePlot()
-# print(arbol1.buscar(80))
-
-
-
-# arbol1 = ArbolBuscador(["juego","estado", "radio", "casa", "pato", "frio", "zorro", "balon", "nariz"])
-# # #arbol1.insertarPalabra("pato")
-# arbol1.treePlot()
-
-# arbol1 = ArbolBuscador("juego", "play.com")
-# arbol1 = ArbolBuscador("entrada", "ticketeck.com")
 
 arbol1 = ArbolBuscador()
 arbol1.insertarPalabra("juego", "juampy.com")
@@ -54,7 +42,7 @@ listaDePalabras2.append("estado")
 #insertar pagina (lista de palabras, una pagina web)
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
-#arbol1.treePlot("arbolInicial")
+# arbol1.treePlot("arbolInicial")
 print()
 
 #buscar palabras (lista de palabras)
@@ -70,8 +58,8 @@ print()
 #arbol1.treePlot("eliminado")
 
 #eliminar pagina (si web que eliminamos tiene una sola palabra, tambien la elimina) probar con lo del profe
-# arbol1.eliminarPagina("cosmeticos.com")
-# arbol1.treePlot("eliminadoElla")
+arbol1.eliminarPagina("cualquiera.com")
+arbol1.treePlot("eliminadoCualquiera")
 
 print("cantidad total de palabras: ", arbol1.cantidadTotalPalabras(1))
 print()
