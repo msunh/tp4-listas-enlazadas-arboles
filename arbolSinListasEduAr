@@ -1,48 +1,48 @@
 digraph {
 	empleadas [label="empleadas
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	cosas [label="cosas
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	empleadas -> cosas
-	"computaciÃ³n" [label="computaciÃ³n
-[ -> inf.udec.cl]"]
-	cosas -> "computaciÃ³n"
+	"computación" [label="computación
+[ , inf.udec.cl]"]
+	cosas -> "computación"
 	De [label="De
-[ -> arboles.wordpress.com]"]
-	"computaciÃ³n" -> De
+[ , arboles.wordpress.com]"]
+	"computación" -> De
 	1957 [label="1957
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	De -> 1957
 	None1957l [label=None]
 	1957 -> None1957l
 	1970 [label="1970
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	1957 -> 1970
 	None1970l [label=None]
 	1970 -> None1970l
 	C [label="C
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	1970 -> C
 	1972 [label="1972
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	C -> 1972
 	None1972l [label=None]
 	1972 -> None1972l
 	1978 [label="1978
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	1972 -> 1978
 	None1978l [label=None]
 	1978 -> None1978l
 	1991 [label="1991
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	1978 -> 1991
 	None1991l [label=None]
 	1991 -> None1991l
 	Basic [label="Basic
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	1991 -> Basic
 	A [label="A
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	Basic -> A
 	NoneAl [label=None]
 	A -> NoneAl
@@ -51,15 +51,15 @@ digraph {
 	NoneBasicr [label=None]
 	Basic -> NoneBasicr
 	Cuando [label="Cuando
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	C -> Cuando
 	CPU [label="CPU
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	Cuando -> CPU
 	NoneCPUl [label=None]
 	CPU -> NoneCPUl
 	Cola [label="Cola
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	CPU -> Cola
 	NoneColal [label=None]
 	Cola -> NoneColal
@@ -68,64 +68,64 @@ digraph {
 	NoneCuandor [label=None]
 	Cuando -> NoneCuandor
 	buen [label="buen
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	De -> buen
 	Java [label="Java
-[ -> python.org.ar -> geekytheory.com -> inf.udec.cl]"]
+[ , python.org.ar , geekytheory.com , inf.udec.cl]"]
 	buen -> Java
 	El [label="El
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	Java -> El
 	NoneEll [label=None]
 	El -> NoneEll
 	Es [label="Es
-[ -> python.org.ar -> geekytheory.com -> programacionuno.wordpress.com]"]
+[ , python.org.ar , geekytheory.com , programacionuno.wordpress.com]"]
 	El -> Es
 	NoneEsl [label=None]
 	Es -> NoneEsl
 	Fortran [label="Fortran
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	Es -> Fortran
-	"EstÃ¡n" [label="EstÃ¡n
-[ -> inf.udec.cl]"]
-	Fortran -> "EstÃ¡n"
-	"NoneEstÃ¡nl" [label=None]
-	"EstÃ¡n" -> "NoneEstÃ¡nl"
+	"Están" [label="Están
+[ , inf.udec.cl]"]
+	Fortran -> "Están"
+	"NoneEstánl" [label=None]
+	"Están" -> "NoneEstánl"
 	FIFO [label="FIFO
-[ -> programacionuno.wordpress.com]"]
-	"EstÃ¡n" -> FIFO
+[ , programacionuno.wordpress.com]"]
+	"Están" -> FIFO
 	NoneFIFOl [label=None]
 	FIFO -> NoneFIFOl
 	First [label="First
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	FIFO -> First
 	NoneFirstl [label=None]
 	First -> NoneFirstl
 	NoneFirstr [label=None]
 	First -> NoneFirstr
 	Gracias [label="Gracias
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	Fortran -> Gracias
 	NoneGraciasl [label=None]
 	Gracias -> NoneGraciasl
 	NoneGraciasr [label=None]
 	Gracias -> NoneGraciasr
 	Vamos [label="Vamos
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	Java -> Vamos
 	Python [label="Python
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	Vamos -> Python
 	Pascal [label="Pascal
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	Python -> Pascal
 	"Modula-2" [label="Modula-2
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	Pascal -> "Modula-2"
 	"NoneModula-2l" [label=None]
 	"Modula-2" -> "NoneModula-2l"
 	Out [label="Out
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	"Modula-2" -> Out
 	NoneOutl [label=None]
 	Out -> NoneOutl
@@ -134,58 +134,58 @@ digraph {
 	NonePascalr [label=None]
 	Pascal -> NonePascalr
 	Trabajaremos [label="Trabajaremos
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	Python -> Trabajaremos
 	Toma [label="Toma
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	Trabajaremos -> Toma
-	"TambiÃ©n" [label="TambiÃ©n
-[ -> programacionuno.wordpress.com]"]
-	Toma -> "TambiÃ©n"
-	"NoneTambiÃ©nl" [label=None]
-	"TambiÃ©n" -> "NoneTambiÃ©nl"
-	"NoneTambiÃ©nr" [label=None]
-	"TambiÃ©n" -> "NoneTambiÃ©nr"
+	"También" [label="También
+[ , programacionuno.wordpress.com]"]
+	Toma -> "También"
+	"NoneTambiénl" [label=None]
+	"También" -> "NoneTambiénl"
+	"NoneTambiénr" [label=None]
+	"También" -> "NoneTambiénr"
 	NoneTomar [label=None]
 	Toma -> NoneTomar
 	Una [label="Una
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	Trabajaremos -> Una
 	NoneUnal [label=None]
 	Una -> NoneUnal
 	NoneUnar [label=None]
 	Una -> NoneUnar
 	atendiendo [label="atendiendo
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	Vamos -> atendiendo
 	algo [label="algo
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	atendiendo -> algo
 	agregar [label="agregar
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	algo -> agregar
 	Noneagregarl [label=None]
 	agregar -> Noneagregarl
 	Noneagregarr [label=None]
 	agregar -> Noneagregarr
 	aprender [label="aprender
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	algo -> aprender
 	aplicar [label="aplicar
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	aprender -> aplicar
 	alto [label="alto
-[ -> python.org.ar -> geekytheory.com]"]
+[ , python.org.ar , geekytheory.com]"]
 	aplicar -> alto
 	Nonealtol [label=None]
 	alto -> Nonealtol
 	ampliamente [label="ampliamente
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	alto -> ampliamente
 	Noneampliamentel [label=None]
 	ampliamente -> Noneampliamentel
 	aparte [label="aparte
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	ampliamente -> aparte
 	Noneapartel [label=None]
 	aparte -> Noneapartel
@@ -194,25 +194,25 @@ digraph {
 	Noneaplicarr [label=None]
 	aplicar -> Noneaplicarr
 	array [label="array
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	aprender -> array
 	arraigadas [label="arraigadas
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	array -> arraigadas
-	"aritmÃ©ticas" [label="aritmÃ©ticas
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
-	arraigadas -> "aritmÃ©ticas"
-	"NonearitmÃ©ticasl" [label=None]
-	"aritmÃ©ticas" -> "NonearitmÃ©ticasl"
-	"NonearitmÃ©ticasr" [label=None]
-	"aritmÃ©ticas" -> "NonearitmÃ©ticasr"
+	"aritméticas" [label="aritméticas
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
+	arraigadas -> "aritméticas"
+	"Nonearitméticasl" [label=None]
+	"aritméticas" -> "Nonearitméticasl"
+	"Nonearitméticasr" [label=None]
+	"aritméticas" -> "Nonearitméticasr"
 	Nonearraigadasr [label=None]
 	arraigadas -> Nonearraigadasr
 	asocia [label="asocia
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	array -> asocia
 	arrays [label="arrays
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	asocia -> arrays
 	Nonearraysl [label=None]
 	arrays -> Nonearraysl
@@ -221,85 +221,85 @@ digraph {
 	Noneasociar [label=None]
 	asocia -> Noneasociar
 	bastante [label="bastante
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	atendiendo -> bastante
 	aunque [label="aunque
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	bastante -> aunque
 	Noneaunquel [label=None]
 	aunque -> Noneaunquel
 	Noneaunquer [label=None]
 	aunque -> Noneaunquer
-	"basÃ¡ndonos" [label="basÃ¡ndonos
-[ -> aprenderaprogramar.com]"]
-	bastante -> "basÃ¡ndonos"
-	"NonebasÃ¡ndonosl" [label=None]
-	"basÃ¡ndonos" -> "NonebasÃ¡ndonosl"
+	"basándonos" [label="basándonos
+[ , aprenderaprogramar.com]"]
+	bastante -> "basándonos"
+	"Nonebasándonosl" [label=None]
+	"basándonos" -> "Nonebasándonosl"
 	bien [label="bien
-[ -> python.org.ar]"]
-	"basÃ¡ndonos" -> bien
+[ , python.org.ar]"]
+	"basándonos" -> bien
 	Nonebienl [label=None]
 	bien -> Nonebienl
 	bloque [label="bloque
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	bien -> bloque
 	Nonebloquel [label=None]
 	bloque -> Nonebloquel
 	Nonebloquer [label=None]
 	bloque -> Nonebloquer
-	"clarÃ­simo" [label="clarÃ­simo
-[ -> geekytheory.com -> inf.udec.cl]"]
-	buen -> "clarÃ­simo"
-	"caracterÃ­sticas" [label="caracterÃ­sticas
-[ -> python.org.ar]"]
-	"clarÃ­simo" -> "caracterÃ­sticas"
+	"clarísimo" [label="clarísimo
+[ , geekytheory.com , inf.udec.cl]"]
+	buen -> "clarísimo"
+	"características" [label="características
+[ , python.org.ar]"]
+	"clarísimo" -> "características"
 	caracterizada [label="caracterizada
-[ -> programacionuno.wordpress.com]"]
-	"caracterÃ­sticas" -> caracterizada
+[ , programacionuno.wordpress.com]"]
+	"características" -> caracterizada
 	Nonecaracterizadal [label=None]
 	caracterizada -> Nonecaracterizadal
 	Nonecaracterizadar [label=None]
 	caracterizada -> Nonecaracterizadar
 	cierto [label="cierto
-[ -> geekytheory.com]"]
-	"caracterÃ­sticas" -> cierto
+[ , geekytheory.com]"]
+	"características" -> cierto
 	Noneciertol [label=None]
 	cierto -> Noneciertol
 	Noneciertor [label=None]
 	cierto -> Noneciertor
 	compatibilizando [label="compatibilizando
-[ -> python.org.ar]"]
-	"clarÃ­simo" -> compatibilizando
+[ , python.org.ar]"]
+	"clarísimo" -> compatibilizando
 	Nonecompatibilizandol [label=None]
 	compatibilizando -> Nonecompatibilizandol
 	complicado [label="complicado
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	compatibilizando -> complicado
 	Nonecomplicadol [label=None]
 	complicado -> Nonecomplicadol
 	Nonecomplicador [label=None]
 	complicado -> Nonecomplicador
 	conceptos [label="conceptos
-[ -> aprenderaprogramar.com]"]
-	"computaciÃ³n" -> conceptos
+[ , aprenderaprogramar.com]"]
+	"computación" -> conceptos
 	con [label="con
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	conceptos -> con
 	comunes [label="comunes
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	con -> comunes
 	Nonecomunesl [label=None]
 	comunes -> Nonecomunesl
 	Nonecomunesr [label=None]
 	comunes -> Nonecomunesr
-	"concatenaciÃ³n" [label="concatenaciÃ³n
-[ -> python.org.ar]"]
-	con -> "concatenaciÃ³n"
-	"NoneconcatenaciÃ³nl" [label=None]
-	"concatenaciÃ³n" -> "NoneconcatenaciÃ³nl"
+	"concatenación" [label="concatenación
+[ , python.org.ar]"]
+	con -> "concatenación"
+	"Noneconcatenaciónl" [label=None]
+	"concatenación" -> "Noneconcatenaciónl"
 	concepto [label="concepto
-[ -> inf.udec.cl]"]
-	"concatenaciÃ³n" -> concepto
+[ , inf.udec.cl]"]
+	"concatenación" -> concepto
 	Noneconceptol [label=None]
 	concepto -> Noneconceptol
 	Noneconceptor [label=None]
@@ -307,73 +307,73 @@ digraph {
 	Noneconceptosr [label=None]
 	conceptos -> Noneconceptosr
 	cumplen [label="cumplen
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	cosas -> cumplen
 	Nonecumplenl [label=None]
 	cumplen -> Nonecumplenl
 	determinemos [label="determinemos
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	cumplen -> determinemos
 	decisiones [label="decisiones
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	determinemos -> decisiones
 	debido [label="debido
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	decisiones -> debido
 	Nonedebidol [label=None]
 	debido -> Nonedebidol
 	Nonedebidor [label=None]
 	debido -> Nonedebidor
 	definimos [label="definimos
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	decisiones -> definimos
 	Nonedefinimosl [label=None]
 	definimos -> Nonedefinimosl
 	desde [label="desde
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	definimos -> desde
 	Nonedesdel [label=None]
 	desde -> Nonedesdel
 	determinados [label="determinados
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	desde -> determinados
 	Nonedeterminadosl [label=None]
 	determinados -> Nonedeterminadosl
 	Nonedeterminadosr [label=None]
 	determinados -> Nonedeterminadosr
 	dos [label="dos
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	determinemos -> dos
 	directorios [label="directorios
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	dos -> directorios
 	diferencian [label="diferencian
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	directorios -> diferencian
 	Nonediferencianl [label=None]
 	diferencian -> Nonediferencianl
 	dimensiones [label="dimensiones
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	diferencian -> dimensiones
 	Nonedimensionesl [label=None]
 	dimensiones -> Nonedimensionesl
 	Nonedimensionesr [label=None]
 	dimensiones -> Nonedimensionesr
 	donde [label="donde
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	directorios -> donde
 	Nonedondel [label=None]
 	donde -> Nonedondel
 	Nonedonder [label=None]
 	donde -> Nonedonder
 	ejemplos [label="ejemplos
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	dos -> ejemplos
 	ejemplo [label="ejemplo
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	ejemplos -> ejemplo
 	ejecute [label="ejecute
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	ejemplo -> ejecute
 	Noneejecutel [label=None]
 	ejecute -> Noneejecutel
@@ -382,37 +382,37 @@ digraph {
 	Noneejemplor [label=None]
 	ejemplo -> Noneejemplor
 	ellos [label="ellos
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	ejemplos -> ellos
 	Noneellosl [label=None]
 	ellos -> Noneellosl
 	Noneellosr [label=None]
 	ellos -> Noneellosr
 	poderoso [label="poderoso
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	empleadas -> poderoso
-	"nÃºmero" [label="nÃºmero
-[ -> geekytheory.com]"]
-	poderoso -> "nÃºmero"
+	"número" [label="número
+[ , geekytheory.com]"]
+	poderoso -> "número"
 	idea [label="idea
-[ -> aprenderaprogramar.com]"]
-	"nÃºmero" -> idea
+[ , aprenderaprogramar.com]"]
+	"número" -> idea
 	en [label="en
-[ -> arboles.wordpress.com -> aprenderaprogramar.com -> python.org.ar -> geekytheory.com -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , arboles.wordpress.com , aprenderaprogramar.com , python.org.ar , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]"]
 	idea -> en
 	Noneenl [label=None]
 	en -> Noneenl
 	esto [label="esto
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	en -> esto
 	entra [label="entra
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	esto -> entra
 	entorno [label="entorno
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	entra -> entorno
 	entender [label="entender
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	entorno -> entender
 	Noneentenderl [label=None]
 	entender -> Noneentenderl
@@ -421,49 +421,49 @@ digraph {
 	Noneentornor [label=None]
 	entorno -> Noneentornor
 	escribiendo [label="escribiendo
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	entra -> escribiendo
 	Noneescribiendol [label=None]
 	escribiendo -> Noneescribiendol
 	establecer [label="establecer
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	escribiendo -> establecer
 	Noneestablecerl [label=None]
 	establecer -> Noneestablecerl
 	estilo [label="estilo
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	establecer -> estilo
-	"estarÃ¡" [label="estarÃ¡
-[ -> geekytheory.com -> inf.udec.cl]"]
-	estilo -> "estarÃ¡"
-	"NoneestarÃ¡l" [label=None]
-	"estarÃ¡" -> "NoneestarÃ¡l"
-	"NoneestarÃ¡r" [label=None]
-	"estarÃ¡" -> "NoneestarÃ¡r"
+	"estará" [label="estará
+[ , geekytheory.com , inf.udec.cl]"]
+	estilo -> "estará"
+	"Noneestarál" [label=None]
+	"estará" -> "Noneestarál"
+	"Noneestarár" [label=None]
+	"estará" -> "Noneestarár"
 	Noneestilor [label=None]
 	estilo -> Noneestilor
 	hardware [label="hardware
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	esto -> hardware
 	flexible [label="flexible
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	hardware -> flexible
 	fila [label="fila
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	flexible -> fila
 	favor [label="favor
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	fila -> favor
 	extremo [label="extremo
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	favor -> extremo
-	"extracciÃ³n" [label="extracciÃ³n
-[ -> programacionuno.wordpress.com]"]
-	extremo -> "extracciÃ³n"
-	"NoneextracciÃ³nl" [label=None]
-	"extracciÃ³n" -> "NoneextracciÃ³nl"
-	"NoneextracciÃ³nr" [label=None]
-	"extracciÃ³n" -> "NoneextracciÃ³nr"
+	"extracción" [label="extracción
+[ , programacionuno.wordpress.com]"]
+	extremo -> "extracción"
+	"Noneextracciónl" [label=None]
+	"extracción" -> "Noneextracciónl"
+	"Noneextracciónr" [label=None]
+	"extracción" -> "Noneextracciónr"
 	Noneextremor [label=None]
 	extremo -> Noneextremor
 	Nonefavorr [label=None]
@@ -471,42 +471,42 @@ digraph {
 	Nonefilar [label=None]
 	fila -> Nonefilar
 	general [label="general
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	flexible -> general
-	"fÃ¡cil" [label="fÃ¡cil
-[ -> python.org.ar]"]
-	general -> "fÃ¡cil"
+	"fácil" [label="fácil
+[ , python.org.ar]"]
+	general -> "fácil"
 	formas [label="formas
-[ -> python.org.ar]"]
-	"fÃ¡cil" -> formas
+[ , python.org.ar]"]
+	"fácil" -> formas
 	Noneformasl [label=None]
 	formas -> Noneformasl
-	"funciÃ³n" [label="funciÃ³n
-[ -> python.org.ar]"]
-	formas -> "funciÃ³n"
+	"función" [label="función
+[ , python.org.ar]"]
+	formas -> "función"
 	formato [label="formato
-[ -> python.org.ar]"]
-	"funciÃ³n" -> formato
+[ , python.org.ar]"]
+	"función" -> formato
 	Noneformatol [label=None]
 	formato -> Noneformatol
 	Noneformator [label=None]
 	formato -> Noneformator
-	"NonefunciÃ³nr" [label=None]
-	"funciÃ³n" -> "NonefunciÃ³nr"
-	"fÃ¡cilmente" [label="fÃ¡cilmente
-[ -> python.org.ar -> geekytheory.com]"]
-	"fÃ¡cil" -> "fÃ¡cilmente"
-	"NonefÃ¡cilmentel" [label=None]
-	"fÃ¡cilmente" -> "NonefÃ¡cilmentel"
-	"NonefÃ¡cilmenter" [label=None]
-	"fÃ¡cilmente" -> "NonefÃ¡cilmenter"
+	"Nonefunciónr" [label=None]
+	"función" -> "Nonefunciónr"
+	"fácilmente" [label="fácilmente
+[ , python.org.ar , geekytheory.com]"]
+	"fácil" -> "fácilmente"
+	"Nonefácilmentel" [label=None]
+	"fácilmente" -> "Nonefácilmentel"
+	"Nonefácilmenter" [label=None]
+	"fácilmente" -> "Nonefácilmenter"
 	habilita [label="habilita
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	general -> habilita
 	Nonehabilital [label=None]
 	habilita -> Nonehabilital
 	hacer [label="hacer
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	habilita -> hacer
 	Nonehacerl [label=None]
 	hacer -> Nonehacerl
@@ -515,27 +515,27 @@ digraph {
 	Nonehardwarer [label=None]
 	hardware -> Nonehardwarer
 	manera [label="manera
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	idea -> manera
 	joven [label="joven
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	manera -> joven
-	"jerÃ¡rquico" [label="jerÃ¡rquico
-[ -> arboles.wordpress.com]"]
-	joven -> "jerÃ¡rquico"
-	"informÃ¡tica" [label="informÃ¡tica
-[ -> arboles.wordpress.com]"]
-	"jerÃ¡rquico" -> "informÃ¡tica"
+	"jerárquico" [label="jerárquico
+[ , arboles.wordpress.com]"]
+	joven -> "jerárquico"
+	"informática" [label="informática
+[ , arboles.wordpress.com]"]
+	"jerárquico" -> "informática"
 	incluso [label="incluso
-[ -> python.org.ar]"]
-	"informÃ¡tica" -> incluso
+[ , python.org.ar]"]
+	"informática" -> incluso
 	imprimir [label="imprimir
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	incluso -> imprimir
 	Noneimprimirl [label=None]
 	imprimir -> Noneimprimirl
 	in [label="in
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	imprimir -> in
 	Noneinl [label=None]
 	in -> Noneinl
@@ -544,52 +544,52 @@ digraph {
 	Noneinclusor [label=None]
 	incluso -> Noneinclusor
 	interactivo [label="interactivo
-[ -> python.org.ar]"]
-	"informÃ¡tica" -> interactivo
+[ , python.org.ar]"]
+	"informática" -> interactivo
 	instrucciones [label="instrucciones
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	interactivo -> instrucciones
-	"inserciÃ³n" [label="inserciÃ³n
-[ -> programacionuno.wordpress.com]"]
-	instrucciones -> "inserciÃ³n"
-	"inglÃ©s" [label="inglÃ©s
-[ -> programacionuno.wordpress.com]"]
-	"inserciÃ³n" -> "inglÃ©s"
-	"NoneinglÃ©sl" [label=None]
-	"inglÃ©s" -> "NoneinglÃ©sl"
-	"NoneinglÃ©sr" [label=None]
-	"inglÃ©s" -> "NoneinglÃ©sr"
-	"NoneinserciÃ³nr" [label=None]
-	"inserciÃ³n" -> "NoneinserciÃ³nr"
+	"inserción" [label="inserción
+[ , programacionuno.wordpress.com]"]
+	instrucciones -> "inserción"
+	"inglés" [label="inglés
+[ , programacionuno.wordpress.com]"]
+	"inserción" -> "inglés"
+	"Noneinglésl" [label=None]
+	"inglés" -> "Noneinglésl"
+	"Noneinglésr" [label=None]
+	"inglés" -> "Noneinglésr"
+	"Noneinserciónr" [label=None]
+	"inserción" -> "Noneinserciónr"
 	Noneinstruccionesr [label=None]
 	instrucciones -> Noneinstruccionesr
-	"iteraciÃ³n" [label="iteraciÃ³n
-[ -> geekytheory.com]"]
-	interactivo -> "iteraciÃ³n"
-	"NoneiteraciÃ³nl" [label=None]
-	"iteraciÃ³n" -> "NoneiteraciÃ³nl"
-	"NoneiteraciÃ³nr" [label=None]
-	"iteraciÃ³n" -> "NoneiteraciÃ³nr"
-	"NonejerÃ¡rquicor" [label=None]
-	"jerÃ¡rquico" -> "NonejerÃ¡rquicor"
+	"iteración" [label="iteración
+[ , geekytheory.com]"]
+	interactivo -> "iteración"
+	"Noneiteraciónl" [label=None]
+	"iteración" -> "Noneiteraciónl"
+	"Noneiteraciónr" [label=None]
+	"iteración" -> "Noneiteraciónr"
+	"Nonejerárquicor" [label=None]
+	"jerárquico" -> "Nonejerárquicor"
 	listas [label="listas
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	joven -> listas
 	lineal [label="lineal
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	listas -> lineal
 	lenguaje [label="lenguaje
-[ -> python.org.ar -> geekytheory.com]"]
+[ , python.org.ar , geekytheory.com]"]
 	lineal -> lenguaje
 	le [label="le
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	lenguaje -> le
 	Nonelel [label=None]
 	le -> Nonelel
 	Noneler [label=None]
 	le -> Noneler
 	lenguajes [label="lenguajes
-[ -> python.org.ar -> geekytheory.com]"]
+[ , python.org.ar , geekytheory.com]"]
 	lenguaje -> lenguajes
 	Nonelenguajesl [label=None]
 	lenguajes -> Nonelenguajesl
@@ -598,61 +598,61 @@ digraph {
 	Nonelinealr [label=None]
 	lineal -> Nonelinealr
 	localizadores [label="localizadores
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	listas -> localizadores
 	llamarse [label="llamarse
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	localizadores -> llamarse
 	llama [label="llama
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	llamarse -> llama
 	Nonellamal [label=None]
 	llama -> Nonellamal
 	Nonellamar [label=None]
 	llama -> Nonellamar
 	localizador [label="localizador
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	llamarse -> localizador
 	Nonelocalizadorl [label=None]
 	localizador -> Nonelocalizadorl
 	Nonelocalizadorr [label=None]
 	localizador -> Nonelocalizadorr
 	lugar [label="lugar
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	localizadores -> lugar
 	Nonelugarl [label=None]
 	lugar -> Nonelugarl
 	Nonelugarr [label=None]
 	lugar -> Nonelugarr
 	nivel [label="nivel
-[ -> python.org.ar -> geekytheory.com]"]
+[ , python.org.ar , geekytheory.com]"]
 	manera -> nivel
-	"mÃ¡s" [label="mÃ¡s
-[ -> arboles.wordpress.com -> aprenderaprogramar.com -> python.org.ar]"]
-	nivel -> "mÃ¡s"
+	"más" [label="más
+[ , arboles.wordpress.com , aprenderaprogramar.com , python.org.ar]"]
+	nivel -> "más"
 	matriz [label="matriz
-[ -> aprenderaprogramar.com]"]
-	"mÃ¡s" -> matriz
+[ , aprenderaprogramar.com]"]
+	"más" -> matriz
 	Nonematrizl [label=None]
 	matriz -> Nonematrizl
 	momento [label="momento
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	matriz -> momento
 	mismos [label="mismos
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	momento -> mismos
 	Nonemismosl [label=None]
 	mismos -> Nonemismosl
 	Nonemismosr [label=None]
 	mismos -> Nonemismosr
 	muy [label="muy
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	momento -> muy
 	muchos [label="muchos
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	muy -> muchos
 	muchas [label="muchas
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	muchos -> muchas
 	Nonemuchasl [label=None]
 	muchas -> Nonemuchasl
@@ -662,68 +662,68 @@ digraph {
 	muchos -> Nonemuchosr
 	Nonemuyr [label=None]
 	muy -> Nonemuyr
-	"mÃ©todos" [label="mÃ©todos
-[ -> geekytheory.com]"]
-	"mÃ¡s" -> "mÃ©todos"
-	"NonemÃ©todosl" [label=None]
-	"mÃ©todos" -> "NonemÃ©todosl"
+	"métodos" [label="métodos
+[ , geekytheory.com]"]
+	"más" -> "métodos"
+	"Nonemétodosl" [label=None]
+	"métodos" -> "Nonemétodosl"
 	ni [label="ni
-[ -> inf.udec.cl]"]
-	"mÃ©todos" -> ni
+[ , inf.udec.cl]"]
+	"métodos" -> ni
 	Nonenil [label=None]
 	ni -> Nonenil
 	Nonenir [label=None]
 	ni -> Nonenir
 	nuestro [label="nuestro
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	nivel -> nuestro
 	nosotros [label="nosotros
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	nuestro -> nosotros
 	Nonenosotrosl [label=None]
 	nosotros -> Nonenosotrosl
 	Nonenosotrosr [label=None]
 	nosotros -> Nonenosotrosr
-	"numÃ©ricos" [label="numÃ©ricos
-[ -> python.org.ar]"]
-	nuestro -> "numÃ©ricos"
-	"NonenumÃ©ricosl" [label=None]
-	"numÃ©ricos" -> "NonenumÃ©ricosl"
-	"NonenumÃ©ricosr" [label=None]
-	"numÃ©ricos" -> "NonenumÃ©ricosr"
+	"numéricos" [label="numéricos
+[ , python.org.ar]"]
+	nuestro -> "numéricos"
+	"Nonenuméricosl" [label=None]
+	"numéricos" -> "Nonenuméricosl"
+	"Nonenuméricosr" [label=None]
+	"numéricos" -> "Nonenuméricosr"
 	papel [label="papel
-[ -> arboles.wordpress.com]"]
-	"nÃºmero" -> papel
+[ , arboles.wordpress.com]"]
+	"número" -> papel
 	organizaciones [label="organizaciones
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	papel -> organizaciones
 	objeto [label="objeto
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	organizaciones -> objeto
 	Noneobjetol [label=None]
 	objeto -> Noneobjetol
 	operaciones [label="operaciones
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	objeto -> operaciones
 	Noneoperacionesl [label=None]
 	operaciones -> Noneoperacionesl
-	"operaciÃ³n" [label="operaciÃ³n
-[ -> programacionuno.wordpress.com]"]
-	operaciones -> "operaciÃ³n"
-	"NoneoperaciÃ³nl" [label=None]
-	"operaciÃ³n" -> "NoneoperaciÃ³nl"
-	"NoneoperaciÃ³nr" [label=None]
-	"operaciÃ³n" -> "NoneoperaciÃ³nr"
+	"operación" [label="operación
+[ , programacionuno.wordpress.com]"]
+	operaciones -> "operación"
+	"Noneoperaciónl" [label=None]
+	"operación" -> "Noneoperaciónl"
+	"Noneoperaciónr" [label=None]
+	"operación" -> "Noneoperaciónr"
 	os [label="os
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	organizaciones -> os
 	Noneosl [label=None]
 	os -> Noneosl
 	otros [label="otros
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	os -> otros
 	otro [label="otro
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	otros -> otro
 	Noneotrol [label=None]
 	otro -> Noneotrol
@@ -732,18 +732,18 @@ digraph {
 	Noneotrosr [label=None]
 	otros -> Noneotrosr
 	para [label="para
-[ -> arboles.wordpress.com -> geekytheory.com]"]
+[ , arboles.wordpress.com , geekytheory.com]"]
 	papel -> para
 	Noneparal [label=None]
 	para -> Noneparal
 	percaten [label="percaten
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	para -> percaten
 	pautas [label="pautas
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	percaten -> pautas
 	patrones [label="patrones
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	pautas -> patrones
 	Nonepatronesl [label=None]
 	patrones -> Nonepatronesl
@@ -752,25 +752,25 @@ digraph {
 	Nonepautasr [label=None]
 	pautas -> Nonepautasr
 	podemos [label="podemos
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	percaten -> podemos
 	pila [label="pila
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	podemos -> pila
 	Nonepilal [label=None]
 	pila -> Nonepilal
 	platos [label="platos
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	pila -> platos
 	pilas [label="pilas
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	platos -> pilas
 	Nonepilasl [label=None]
 	pilas -> Nonepilasl
 	Nonepilasr [label=None]
 	pilas -> Nonepilasr
 	pocas [label="pocas
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	platos -> pocas
 	Nonepocasl [label=None]
 	pocas -> Nonepocasl
@@ -779,51 +779,51 @@ digraph {
 	Nonepodemosr [label=None]
 	podemos -> Nonepodemosr
 	usar [label="usar
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	poderoso -> usar
-	"programaciÃ³n" [label="programaciÃ³n
-[ -> python.org.ar -> geekytheory.com -> inf.udec.cl]"]
-	usar -> "programaciÃ³n"
+	"programación" [label="programación
+[ , python.org.ar , geekytheory.com , inf.udec.cl]"]
+	usar -> "programación"
 	problemas [label="problemas
-[ -> arboles.wordpress.com -> geekytheory.com]"]
-	"programaciÃ³n" -> problemas
+[ , arboles.wordpress.com , geekytheory.com]"]
+	"programación" -> problemas
 	predecesores [label="predecesores
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	problemas -> predecesores
 	Nonepredecesoresl [label=None]
 	predecesores -> Nonepredecesoresl
 	print [label="print
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	predecesores -> print
-	"preocupÃ©is" [label="preocupÃ©is
-[ -> geekytheory.com]"]
-	print -> "preocupÃ©is"
-	"NonepreocupÃ©isl" [label=None]
-	"preocupÃ©is" -> "NonepreocupÃ©isl"
+	"preocupéis" [label="preocupéis
+[ , geekytheory.com]"]
+	print -> "preocupéis"
+	"Nonepreocupéisl" [label=None]
+	"preocupéis" -> "Nonepreocupéisl"
 	primer [label="primer
-[ -> programacionuno.wordpress.com]"]
-	"preocupÃ©is" -> primer
+[ , programacionuno.wordpress.com]"]
+	"preocupéis" -> primer
 	Noneprimerl [label=None]
 	primer -> Noneprimerl
 	primero [label="primero
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	primer -> primero
 	Noneprimerol [label=None]
 	primero -> Noneprimerol
 	Noneprimeror [label=None]
 	primero -> Noneprimeror
 	printf [label="printf
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	print -> printf
 	Noneprintfl [label=None]
 	printf -> Noneprintfl
 	Noneprintfr [label=None]
 	printf -> Noneprintfr
 	procesar [label="procesar
-[ -> python.org.ar -> geekytheory.com]"]
+[ , python.org.ar , geekytheory.com]"]
 	problemas -> procesar
 	procesadores [label="procesadores
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	procesar -> procesadores
 	Noneprocesadoresl [label=None]
 	procesadores -> Noneprocesadoresl
@@ -831,81 +831,84 @@ digraph {
 	procesadores -> Noneprocesadoresr
 	Noneprocesarr [label=None]
 	procesar -> Noneprocesarr
-	"tÃ©cnica" [label="tÃ©cnica
-[ -> geekytheory.com]"]
-	"programaciÃ³n" -> "tÃ©cnica"
+	"técnica" [label="técnica
+[ , geekytheory.com]"]
+	"programación" -> "técnica"
 	toma [label="toma
-[ -> arboles.wordpress.com]"]
-	"tÃ©cnica" -> toma
-	"soluciÃ³n" [label="soluciÃ³n
-[ -> python.org.ar]"]
-	toma -> "soluciÃ³n"
+[ , arboles.wordpress.com]"]
+	"técnica" -> toma
+	"solución" [label="solución
+[ , python.org.ar]"]
+	toma -> "solución"
 	similar [label="similar
-[ -> inf.udec.cl]"]
-	"soluciÃ³n" -> similar
+[ , inf.udec.cl]"]
+	"solución" -> similar
 	resolver [label="resolver
-[ -> arboles.wordpress.com -> geekytheory.com]"]
+[ , arboles.wordpress.com , geekytheory.com]"]
 	similar -> resolver
 	pueden [label="pueden
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	resolver -> pueden
 	puedan [label="puedan
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	pueden -> puedan
-	"propÃ³sito" [label="propÃ³sito
-[ -> python.org.ar]"]
-	puedan -> "propÃ³sito"
-	"NonepropÃ³sitol" [label=None]
-	"propÃ³sito" -> "NonepropÃ³sitol"
-	"NonepropÃ³sitor" [label=None]
-	"propÃ³sito" -> "NonepropÃ³sitor"
+	"propósito" [label="propósito
+[ , python.org.ar]"]
+	puedan -> "propósito"
+	"Nonepropósitol" [label=None]
+	"propósito" -> "Nonepropósitol"
+	"Nonepropósitor" [label=None]
+	"propósito" -> "Nonepropósitor"
 	Nonepuedanr [label=None]
 	puedan -> Nonepuedanr
 	recursividad [label="recursividad
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	pueden -> recursividad
 	realiza [label="realiza
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	recursividad -> realiza
 	Nonerealizal [label=None]
 	realiza -> Nonerealizal
 	Nonerealizar [label=None]
 	realiza -> Nonerealizar
 	relativamente [label="relativamente
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	recursividad -> relativamente
 	Nonerelativamentel [label=None]
 	relativamente -> Nonerelativamentel
 	Nonerelativamenter [label=None]
 	relativamente -> Nonerelativamenter
 	saben [label="saben
-[ -> inf.udec.cl -> programacionuno.wordpress.com]"]
+[ , inf.udec.cl , programacionuno.wordpress.com]"]
 	resolver -> saben
 	Nonesabenl [label=None]
 	saben -> Nonesabenl
+	signifique [label="signifique
+[ , aprenderaprogramar.com , python.org.ar]"]
+	saben -> signifique
 	se [label="se
-[ -> aprenderaprogramar.com -> python.org.ar -> geekytheory.com -> inf.udec.cl -> programacionuno.wordpress.com]"]
-	saben -> se
+[ , aprenderaprogramar.com , python.org.ar , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]"]
+	signifique -> se
 	sacar [label="sacar
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	se -> sacar
 	Nonesacarl [label=None]
 	sacar -> Nonesacarl
 	salir [label="salir
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	sacar -> salir
 	Nonesalirl [label=None]
 	salir -> Nonesalirl
 	Nonesalirr [label=None]
 	salir -> Nonesalirr
 	ser [label="ser
-[ -> aprenderaprogramar.com -> python.org.ar -> programacionuno.wordpress.com]"]
+[ , aprenderaprogramar.com , python.org.ar , programacionuno.wordpress.com]"]
 	se -> ser
 	sencillo [label="sencillo
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	ser -> sencillo
 	secuencia [label="secuencia
-[ -> programacionuno.wordpress.com]"]
+[ , programacionuno.wordpress.com]"]
 	sencillo -> secuencia
 	Nonesecuencial [label=None]
 	secuencia -> Nonesecuencial
@@ -913,21 +916,18 @@ digraph {
 	secuencia -> Nonesecuenciar
 	Nonesencillor [label=None]
 	sencillo -> Nonesencillor
-	signifique [label="signifique
-[ -> aprenderaprogramar.com -> python.org.ar]"]
-	ser -> signifique
-	Nonesignifiquel [label=None]
-	signifique -> Nonesignifiquel
+	Noneserr [label=None]
+	ser -> Noneserr
 	Nonesignifiquer [label=None]
 	signifique -> Nonesignifiquer
 	software [label="software
-[ -> arboles.wordpress.com]"]
+[ , arboles.wordpress.com]"]
 	similar -> software
 	sobre [label="sobre
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	software -> sobre
 	siquiera [label="siquiera
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	sobre -> siquiera
 	Nonesiquieral [label=None]
 	siquiera -> Nonesiquieral
@@ -936,67 +936,67 @@ digraph {
 	Nonesobrer [label=None]
 	sobre -> Nonesobrer
 	sola [label="sola
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	software -> sola
 	Nonesolal [label=None]
 	sola -> Nonesolal
 	Nonesolar [label=None]
 	sola -> Nonesolar
 	tipo [label="tipo
-[ -> arboles.wordpress.com -> python.org.ar]"]
-	"soluciÃ³n" -> tipo
+[ , arboles.wordpress.com , python.org.ar]"]
+	"solución" -> tipo
 	tanto [label="tanto
-[ -> arboles.wordpress.com -> python.org.ar]"]
+[ , arboles.wordpress.com , python.org.ar]"]
 	tipo -> tanto
 	su [label="su
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	tanto -> su
 	stack [label="stack
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	su -> stack
 	Nonestackl [label=None]
 	stack -> Nonestackl
 	Nonestackr [label=None]
 	stack -> Nonestackr
 	tabla [label="tabla
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	su -> tabla
-	"sÃ­" [label="sÃ­
-[ -> geekytheory.com]"]
-	tabla -> "sÃ­"
+	"sí" [label="sí
+[ , geekytheory.com]"]
+	tabla -> "sí"
 	superior [label="superior
-[ -> inf.udec.cl]"]
-	"sÃ­" -> superior
+[ , inf.udec.cl]"]
+	"sí" -> superior
 	Nonesuperiorl [label=None]
 	superior -> Nonesuperiorl
 	Nonesuperiorr [label=None]
 	superior -> Nonesuperiorr
-	"sÃ³lo" [label="sÃ³lo
-[ -> inf.udec.cl]"]
-	"sÃ­" -> "sÃ³lo"
-	"NonesÃ³lol" [label=None]
-	"sÃ³lo" -> "NonesÃ³lol"
-	"NonesÃ³lor" [label=None]
-	"sÃ³lo" -> "NonesÃ³lor"
+	"sólo" [label="sólo
+[ , inf.udec.cl]"]
+	"sí" -> "sólo"
+	"Nonesólol" [label=None]
+	"sólo" -> "Nonesólol"
+	"Nonesólor" [label=None]
+	"sólo" -> "Nonesólor"
 	tan [label="tan
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	tabla -> tan
 	Nonetanl [label=None]
 	tan -> Nonetanl
 	Nonetanr [label=None]
 	tan -> Nonetanr
 	texto [label="texto
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	tanto -> texto
 	Nonetextol [label=None]
 	texto -> Nonetextol
 	Nonetextor [label=None]
 	texto -> Nonetextor
 	todo [label="todo
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	tipo -> todo
 	tipos [label="tipos
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	todo -> tipos
 	Nonetiposl [label=None]
 	tipos -> Nonetiposl
@@ -1004,76 +1004,76 @@ digraph {
 	tipos -> Nonetiposr
 	Nonetodor [label=None]
 	todo -> Nonetodor
-	"travÃ©s" [label="travÃ©s
-[ -> aprenderaprogramar.com]"]
-	toma -> "travÃ©s"
-	"NonetravÃ©sl" [label=None]
-	"travÃ©s" -> "NonetravÃ©sl"
+	"través" [label="través
+[ , aprenderaprogramar.com]"]
+	toma -> "través"
+	"Nonetravésl" [label=None]
+	"través" -> "Nonetravésl"
 	tres [label="tres
-[ -> python.org.ar]"]
-	"travÃ©s" -> tres
+[ , python.org.ar]"]
+	"través" -> tres
 	Nonetresl [label=None]
 	tres -> Nonetresl
 	Nonetresr [label=None]
 	tres -> Nonetresr
 	uno [label="uno
-[ -> aprenderaprogramar.com]"]
-	"tÃ©cnica" -> uno
+[ , aprenderaprogramar.com]"]
+	"técnica" -> uno
 	unas [label="unas
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	uno -> unas
 	Noneunasl [label=None]
 	unas -> Noneunasl
 	Noneunasr [label=None]
 	unas -> Noneunasr
 	usando [label="usando
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	uno -> usando
 	Noneusandol [label=None]
 	usando -> Noneusandol
 	Noneusandor [label=None]
 	usando -> Noneusandor
-	"Ã¡rbol" [label="Ã¡rbol
-[ -> arboles.wordpress.com]"]
-	usar -> "Ã¡rbol"
+	"árbol" [label="árbol
+[ , arboles.wordpress.com]"]
+	usar -> "árbol"
 	valido [label="valido
-[ -> arboles.wordpress.com]"]
-	"Ã¡rbol" -> valido
+[ , arboles.wordpress.com]"]
+	"árbol" -> valido
 	utilizada [label="utilizada
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	valido -> utilizada
 	usuarios [label="usuarios
-[ -> inf.udec.cl]"]
+[ , inf.udec.cl]"]
 	utilizada -> usuarios
 	Noneusuariosl [label=None]
 	usuarios -> Noneusuariosl
 	Noneusuariosr [label=None]
 	usuarios -> Noneusuariosr
 	utilizar [label="utilizar
-[ -> geekytheory.com]"]
+[ , geekytheory.com]"]
 	utilizada -> utilizar
 	Noneutilizarl [label=None]
 	utilizar -> Noneutilizarl
 	Noneutilizarr [label=None]
 	utilizar -> Noneutilizarr
 	vector [label="vector
-[ -> aprenderaprogramar.com]"]
+[ , aprenderaprogramar.com]"]
 	valido -> vector
 	variable [label="variable
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	vector -> variable
 	Nonevariablel [label=None]
 	variable -> Nonevariablel
 	varios [label="varios
-[ -> aprenderaprogramar.com -> python.org.ar]"]
+[ , aprenderaprogramar.com , python.org.ar]"]
 	variable -> varios
 	Nonevariosl [label=None]
 	varios -> Nonevariosl
 	veces [label="veces
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	varios -> veces
 	veamos [label="veamos
-[ -> geekytheory.com -> inf.udec.cl]"]
+[ , geekytheory.com , inf.udec.cl]"]
 	veces -> veamos
 	Noneveamosl [label=None]
 	veamos -> Noneveamosl
@@ -1082,17 +1082,17 @@ digraph {
 	Nonevecesr [label=None]
 	veces -> Nonevecesr
 	vez [label="vez
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	vector -> vez
 	Nonevezl [label=None]
 	vez -> Nonevezl
 	write [label="write
-[ -> python.org.ar]"]
+[ , python.org.ar]"]
 	vez -> write
 	Nonewritel [label=None]
 	write -> Nonewritel
 	Nonewriter [label=None]
 	write -> Nonewriter
-	"NoneÃ¡rbolr" [label=None]
-	"Ã¡rbol" -> "NoneÃ¡rbolr"
+	"Noneárbolr" [label=None]
+	"árbol" -> "Noneárbolr"
 }

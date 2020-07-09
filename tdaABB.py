@@ -12,24 +12,24 @@ class NodoArbol:
     self.izquierdo = None
     self.derecho = None
 
-  def getDato(self):
+  def getDato(self): #retorna el dato (nuestra clave) del nodo 
     return self.dato  
 
-  def esHoja(self):
+  def esHoja(self): # si no tiene puntero al derecho ni al izquierdo es hoja (ambos apuntan a None)
     return not self.tieneDerecho() and not self.tieneIzquierdo()
 
-  def tieneIzquierdo(self):
+  def tieneIzquierdo(self): #True si es distinto de None
     return self.izquierdo != None
 
-  def tieneDerecho(self):
+  def tieneDerecho(self): #True si es distinto de None
     return self.derecho != None 
 
-  def getListaWeb(self):
+  def getListaWeb(self): #funcion de prueba para obtener la lista de las paginas ingresadas del nodo raiz
     return self.listaWeb      
 
 
-  #grado (NODO)
-  def grado(self):
+  #grado (NODO) -> cantidad de hijos que tiene un nodo, si no tiene ningun hijo es una hoja
+  def grado(self):  
     grado = 0
     if self.tieneIzquierdo():
       grado += 1
@@ -37,7 +37,7 @@ class NodoArbol:
       grado += 1
     return grado
 
-  #altura (NODO)
+  #altura (NODO) -> largo de la trayectoria a la hoja más lejana 
   def altura(self):
     altura = 0
     if self.grado() == 2:
@@ -49,59 +49,59 @@ class NodoArbol:
     return altura
 
 
-  #busca minimo (NODO)
+  #busca minimo (NODO) -> busca el minimo (el primer nodo sin hijo izquierdo) y retorna el dato
   def buscaMinimo(self):
     dato = None
-    if self.tieneIzquierdo():
+    if self.tieneIzquierdo(): # si tiene izquierdo, guarda el dato y llama recursivamente a la misma funcion
       dato = self.izquierdo.buscaMinimo()
     else:
-      dato = self
+      dato = self   #si no tiene izquierdo , es el minimo
 
     return dato    
 
-  #busca maximo (NODO)
+  #busca maximo (NODO) -> busca el maximo (primer nodo sin hijo derecho) y retorna el dato
   def buscaMaximo(self):
     dato = None
-    if self.tieneDerecho():
+    if self.tieneDerecho(): # si tiene derecho, guarda el dato y llama recursivamente a la misma funcion
       dato = self.derecho.buscaMaximo()
     else:
-      dato = self
+      dato = self #si no tiene derecho, es el maximo
 
     return dato
 
-  #predecesor (NODO)
-  def predecesor(self):
+  #predecesor (NODO) -> maximo del sub arbol izquierdo (el más grande dentro de los mas pequeños)
+  def predecesor(self): 
     predecesor = None
-    if self.tieneIzquierdo():
-      predecesor = self.izquierdo.buscaMaximo()
+    if self.tieneIzquierdo(): # se mueve al lado iquiedo del arbol
+      predecesor = self.izquierdo.buscaMaximo() #busca el maximo y lo guarda en la variable, ese es el predecesor
     return predecesor   
 
-  #sucesor del Nodo
+  #sucesor (NODO) -> el minimo del sub arbol izquierdo (el más pequeño dentro de los más grandes que él)
   def sucesor(self):
     sucesor = None
-    if self.tieneDerecho():
-          sucesor = self.derecho.buscaMinimo()
+    if self.tieneDerecho(): #se mueve al lado derecho del arbol
+          sucesor = self.derecho.buscaMinimo() #y busca el minimo, lo guarda en la variable, ese el sucesor
     return sucesor
 
 
 
-  #buscar dato en el nodo retorna el dato
+  #buscar dato (NODO) -> retorna el dato dentro del nodo
 
   def buscar(self, dato):
        
     nodoDato = None
 
-    if self.dato == dato:
+    if self.dato == dato: #si el dato es igual al que viene por parametro, el dato fue encontrado y se guarda en la variable
       nodoDato = self
     else:
-      if dato < self.dato:
-        if self.tieneIzquierdo():
-          nodoDato = self.izquierdo.buscar(dato)
+      if dato < self.dato:                        #sino, si el dato buscado es menor que el dato en el nodo
+        if self.tieneIzquierdo():                 #y si tiene hijo izquierdo
+          nodoDato = self.izquierdo.buscar(dato)  #busca recursivamente  hacia izquierda, si lo encuentra lo guarda en la variable
       else:
-        if self.tieneDerecho():
-          nodoDato = self.derecho.buscar(dato)
+        if self.tieneDerecho():                   #si tiene hijo derecho        
+          nodoDato = self.derecho.buscar(dato)    #busca recursivamente hacia la derecha, si lo encuentra lo guarda en la variable
 
-    return nodoDato
+    return nodoDato 
 
 
   def buscaPadre(self, dato): #parte de un nodo , buscando un dato y devuelve : me retorna 3 cosas , un puntero al padre, un puntero al nodo y de que lado del padre esta ese nodo
@@ -129,12 +129,11 @@ class NodoArbol:
 
 
 
-  #insertar dato del nodoArbol
+  #insertar dato (NODO) -> inserta el nuevo dato y la direccion web que viene por parametro
 
   def insertar(self, nuevoNodo , direccionWeb):
     if self.dato == nuevoNodo.dato:
-      # print("La palabra ya se encuentra en el arbol")
-      
+            
       if not self.listaWeb.estaEnLista(direccionWeb):
         self.listaWeb.append(direccionWeb)
 

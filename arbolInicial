@@ -1,14 +1,14 @@
 digraph {
 	juego [label="juego
-primero -> juampy.com -> juan.com -> cualquiera.com -|"]
+[ , juampy.com , juan.com , cualquiera.com]"]
 	Piloto [label="Piloto
-primero -> despegar.com -|"]
+[ , despegar.com]"]
 	juego -> Piloto
 	Futbol [label="Futbol
-primero -> espn.com -|"]
+[ , espn.com]"]
 	Piloto -> Futbol
 	Ataud [label="Ataud
-primero -> cualquiera.com -|"]
+[ , cualquiera.com]"]
 	Futbol -> Ataud
 	NoneAtaudl [label=None]
 	Ataud -> NoneAtaudl
@@ -17,20 +17,20 @@ primero -> cualquiera.com -|"]
 	NoneFutbolr [label=None]
 	Futbol -> NoneFutbolr
 	estado [label="estado
-primero -> carlitos.com -> marcos.com -|"]
+[ , carlitos.com , marcos.com]"]
 	Piloto -> estado
 	arbolito [label="arbolito
-primero -> plantas.com -> cualquiera.com -|"]
+[ , plantas.com , cualquiera.com]"]
 	estado -> arbolito
 	Nonearbolitol [label=None]
 	arbolito -> Nonearbolitol
 	avioncito [label="avioncito
-primero -> despegar.com -> jorge.com -|"]
+[ , despegar.com , jorge.com]"]
 	arbolito -> avioncito
 	Noneavioncitol [label=None]
 	avioncito -> Noneavioncitol
 	ella [label="ella
-primero -> cosmeticos.com -|"]
+[ , cosmeticos.com]"]
 	avioncito -> ella
 	Noneellal [label=None]
 	ella -> Noneellal
@@ -39,37 +39,37 @@ primero -> cosmeticos.com -|"]
 	Noneestador [label=None]
 	estado -> Noneestador
 	radio [label="radio
-primero -> cachito.com -> cualquiera.com -|"]
+[ , cachito.com , cualquiera.com]"]
 	juego -> radio
 	libro [label="libro
-primero -> libreria.com -> yenny.com -> elatril.com -> unahurlibros.com -|"]
+[ , libreria.com , yenny.com , elatril.com , unahurlibros.com]"]
 	radio -> libro
 	Nonelibrol [label=None]
 	libro -> Nonelibrol
 	otorrinolaringolo [label="otorrinolaringolo
-primero -> garganta.com -|"]
+[ , garganta.com]"]
 	libro -> otorrinolaringolo
 	mar [label="mar
-primero -> cualquiera.com -|"]
+[ , cualquiera.com]"]
 	otorrinolaringolo -> mar
 	Nonemarl [label=None]
 	mar -> Nonemarl
 	Nonemarr [label=None]
 	mar -> Nonemarr
 	perro [label="perro
-primero -> cualquiera.com -|"]
+[ , cualquiera.com]"]
 	otorrinolaringolo -> perro
 	Noneperrol [label=None]
 	perro -> Noneperrol
 	Noneperror [label=None]
 	perro -> Noneperror
 	rodado [label="rodado
-primero -> cualquiera.com -|"]
+[ , cualquiera.com]"]
 	radio -> rodado
 	Nonerodadol [label=None]
 	rodado -> Nonerodadol
 	tu [label="tu
-primero -> cualquiera.com -|"]
+[ , cualquiera.com]"]
 	rodado -> tu
 	Nonetul [label=None]
 	tu -> Nonetul

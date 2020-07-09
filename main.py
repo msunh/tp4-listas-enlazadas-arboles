@@ -2,7 +2,7 @@ from tdaABB import *
 from tdaListaEnlazada import *
 
 
-
+# este es nuestro archivo "main" para realizar las pruebas de lo implementado en arboles y listas
 
 arbol1 = ArbolBuscador()
 arbol1.insertarPalabra("juego", "juampy.com")
@@ -42,7 +42,7 @@ listaDePalabras2.append("estado")
 #insertar pagina (lista de palabras, una pagina web)
 arbol1.insertarPagina(listaDePalabras, "cualquiera.com")
 
-# arbol1.treePlot("arbolInicial")
+arbol1.treePlot("arbolInicial")
 print()
 
 #buscar palabras (lista de palabras)
@@ -58,8 +58,8 @@ print()
 #arbol1.treePlot("eliminado")
 
 #eliminar pagina (si web que eliminamos tiene una sola palabra, tambien la elimina) probar con lo del profe
-arbol1.eliminarPagina("cualquiera.com")
-arbol1.treePlot("eliminadoCualquiera")
+# arbol1.eliminarPagina("cualquiera.com")
+# arbol1.treePlot("eliminadoCualquiera")
 
 print("cantidad total de palabras: ", arbol1.cantidadTotalPalabras(1))
 print()
