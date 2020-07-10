@@ -199,12 +199,9 @@ digraph {
 	complicado -> Nonecomplicadol
 	Nonecomplicador [label=None]
 	complicado -> Nonecomplicador
-	conceptos [label="conceptos
-[ , aprenderaprogramar.com]"]
-	"computación" -> conceptos
 	con [label="con
 [ , aprenderaprogramar.com]"]
-	conceptos -> con
+	"computación" -> con
 	comunes [label="comunes
 [ , aprenderaprogramar.com]"]
 	con -> comunes
@@ -212,9 +209,12 @@ digraph {
 	comunes -> Nonecomunesl
 	Nonecomunesr [label=None]
 	comunes -> Nonecomunesr
+	conceptos [label="conceptos
+[ , aprenderaprogramar.com]"]
+	con -> conceptos
 	concepto [label="concepto
 [ , inf.udec.cl]"]
-	con -> concepto
+	conceptos -> concepto
 	Noneconceptol [label=None]
 	concepto -> Noneconceptol
 	Noneconceptor [label=None]
@@ -668,12 +668,9 @@ digraph {
 	resolver -> saben
 	Nonesabenl [label=None]
 	saben -> Nonesabenl
-	signifique [label="signifique
-[ , aprenderaprogramar.com]"]
-	saben -> signifique
 	se [label="se
 [ , aprenderaprogramar.com , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]"]
-	signifique -> se
+	saben -> se
 	sacar [label="sacar
 [ , inf.udec.cl]"]
 	se -> sacar
@@ -696,8 +693,11 @@ digraph {
 	secuencia -> Nonesecuencial
 	Nonesecuenciar [label=None]
 	secuencia -> Nonesecuenciar
-	Noneserr [label=None]
-	ser -> Noneserr
+	signifique [label="signifique
+[ , aprenderaprogramar.com]"]
+	ser -> signifique
+	Nonesignifiquel [label=None]
+	signifique -> Nonesignifiquel
 	Nonesignifiquer [label=None]
 	signifique -> Nonesignifiquer
 	software [label="software

@@ -1,0 +1,145 @@
+Las direcciones web de las paginas cargadas son:
+arboles.wordpress.com
+listas.edu.ar
+aprenderaprogramar.com
+python.org.ar
+geekytheory.com
+inf.udec.cl
+programacionuno.wordpress.com
+
+Busqueda de palabras que no existen en el arbol:
+None
+None
+None
+None
+
+Busqueda de palabras que estan en el arbol pero no todas en una pagina:
+
+Buscadas de a una:
+La palabra: priori esta en las Paginas: [ , listas.edu.ar]
+La palabra: dinámica esta en las Paginas: [ , listas.edu.ar]
+La palabra: recursividad esta en las Paginas: [ , geekytheory.com]
+La palabra: mismos esta en las Paginas: [ , geekytheory.com]
+
+Todas juntas: [ , priori , dinámica , recursividad , mismos] estan en las Paginas: []
+
+Busqueda de palabras que estan en dos paginas a la vez:
+Palabras buscadas: [ , estructuras , diferencia , sin , computadora , igual , o , las , son , lineales , usuario , la , a , como , árboles , programador , datos , una , estructura , cualquier , un , Los , duda , de , por , no]
+Paginas: [ , arboles.wordpress.com]
+Palabras buscadas: [ , tienen , variables , ello , sin , o , mismo , nombre , es , elementos , null , son , la , a , como , que , el , los , no , y , una , estos , contienen , un , conjunto , de , Por , En , registros , por , lista]
+Paginas: [ , listas.edu.ar]
+Palabras buscadas: [ , arrays , signifique , ello , sin , o , nombre , en , es , comunes , elementos , con , la , puedan , a , que , como , el , los , y , ser , una , aplicar , todo , un , se , su , de , Por , por , no , más , varios]
+Paginas: [ , aprenderaprogramar.com]
+Palabras buscadas: [ , Java , en , fácilmente , es , nivel , programación , procesar , alto , a , permite , el , que , como , la , lenguajes , los , lenguaje , una , un , se , de , Es , no]
+Paginas: [ , python.org.ar]
+Palabras buscadas: [ , otros , Cuando , bloque , Java , estará , en , es , programación , instrucciones , a , permite , el , que , como , los , nos , una , veamos , utilizada , clarísimo , un , se , muchos , veces , de , En , ejemplos]
+Paginas: [ , geekytheory.com]
+Palabras buscadas: [ , saben , procesadores , en , es , aparte , a , aritméticas , el , que , y , datos , una , estructura , operaciones , CPU , hacer , un , se , de , extremo , En , por]
+Paginas: [ , inf.udec.cl]
+
+Contador de palabras de cada una de las paginas guardadas:
+La pagina arboles.wordpress.com tiene 52 palabras distintas ingresadas segun datos de entrada.
+La pagina arboles.wordpress.com tiene 52 palabras distintas segun el arbol.
+La pagina listas.edu.ar tiene 79 palabras distintas ingresadas segun datos de entrada.
+La pagina listas.edu.ar tiene 79 palabras distintas segun el arbol.
+La pagina aprenderaprogramar.com tiene 69 palabras distintas ingresadas segun datos de entrada.
+La pagina aprenderaprogramar.com tiene 69 palabras distintas segun el arbol.
+La pagina python.org.ar tiene 104 palabras distintas ingresadas segun datos de entrada.
+La pagina python.org.ar tiene 104 palabras distintas segun el arbol.
+La pagina geekytheory.com tiene 68 palabras distintas ingresadas segun datos de entrada.
+La pagina geekytheory.com tiene 68 palabras distintas segun el arbol.
+La pagina inf.udec.cl tiene 73 palabras distintas ingresadas segun datos de entrada.
+La pagina inf.udec.cl tiene 73 palabras distintas segun el arbol.
+La pagina programacionuno.wordpress.com tiene 48 palabras distintas ingresadas segun datos de entrada.
+La pagina programacionuno.wordpress.com tiene 48 palabras distintas segun el arbol.
+
+Contador de palabras de paginas que no estan en el arbol:
+La pagina google.com tiene 0 palabras
+La pagina yahoo.com tiene 0 palabras
+
+Cantidades de palabras de mas de 1, 5 y 9 letras:
+Cantidad de palabras con 1 letras o mas ingresadas: 298
+Cantidad de palabras con 1 letras o mas segun el arbol: 298
+Cantidad de palabras con 5 letras o mas ingresadas: 214
+Cantidad de palabras con 5 letras o mas segun el arbol: 214
+Cantidad de palabras con 9 letras o mas ingresadas: 63
+Cantidad de palabras con 9 letras o mas segun el arbol: 63
+
+Balanceo del arbol: False
+
+Direcciones web de las paginas en cada nivel del arbol:
+[ , arboles.wordpress.com]
+[ , arboles.wordpress.com , listas.edu.ar , aprenderaprogramar.com , python.org.ar , inf.udec.cl , programacionuno.wordpress.com]
+[ , arboles.wordpress.com , listas.edu.ar , python.org.ar , aprenderaprogramar.com , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]
+[ , arboles.wordpress.com , listas.edu.ar , python.org.ar , aprenderaprogramar.com , inf.udec.cl]
+[ , listas.edu.ar , arboles.wordpress.com , aprenderaprogramar.com , python.org.ar , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]
+[ , arboles.wordpress.com , geekytheory.com , inf.udec.cl , aprenderaprogramar.com , listas.edu.ar , python.org.ar , programacionuno.wordpress.com]
+[ , listas.edu.ar , geekytheory.com , inf.udec.cl , python.org.ar , aprenderaprogramar.com , arboles.wordpress.com , programacionuno.wordpress.com]
+[ , listas.edu.ar , aprenderaprogramar.com , python.org.ar , inf.udec.cl , programacionuno.wordpress.com , arboles.wordpress.com , geekytheory.com]
+[ , python.org.ar , aprenderaprogramar.com , listas.edu.ar , arboles.wordpress.com , geekytheory.com , programacionuno.wordpress.com , inf.udec.cl]
+[ , python.org.ar , aprenderaprogramar.com , geekytheory.com , arboles.wordpress.com , programacionuno.wordpress.com , inf.udec.cl , listas.edu.ar]
+[ , geekytheory.com , inf.udec.cl , listas.edu.ar , aprenderaprogramar.com , python.org.ar , programacionuno.wordpress.com]
+[ , geekytheory.com , inf.udec.cl , listas.edu.ar , aprenderaprogramar.com , python.org.ar , programacionuno.wordpress.com]
+[ , listas.edu.ar , inf.udec.cl , aprenderaprogramar.com , python.org.ar , geekytheory.com , programacionuno.wordpress.com]
+[ , python.org.ar , inf.udec.cl , aprenderaprogramar.com , programacionuno.wordpress.com , geekytheory.com]
+[ , geekytheory.com , aprenderaprogramar.com , python.org.ar , programacionuno.wordpress.com]
+[ , inf.udec.cl , programacionuno.wordpress.com]
+[]
+
+Cantidades de palabras mas usadas:
+Hay 298 palabras usadas en 1 paginas o mas
+Hay 99 palabras usadas en 2 paginas o mas
+Hay 42 palabras usadas en 3 paginas o mas
+Hay 22 palabras usadas en 4 paginas o mas
+Hay 17 palabras usadas en 5 paginas o mas
+Hay 11 palabras usadas en 6 paginas o mas
+Hay 4 palabras usadas en 7 paginas o mas
+Hay 0 palabras usadas en 8 paginas o mas
+Hay 0 palabras usadas en 9 paginas o mas
+
+Palabras internas en orden alfabetico:
+Todas las palabras con mayuscula ingresadas: ['A', 'Basic', 'C', 'CPU', 'Cola', 'Cuando', 'De', 'El', 'En', 'Es', 'Están', 'FIFO', 'First', 'Fortran', 'Gracias', 'Java', 'La', 'Los', 'Modula-2', 'Out', 'Pascal', 'Por', 'Python', 'TDA', 'También', 'Toma', 'Trabajaremos', 'Una', 'Vamos']
+Palabras en mayuscula de nodos internos [ , Basic , C , CPU , Cuando , De , En , Es , Están , FIFO , Fortran , Java , La , Los , Modula-2 , Pascal , Por , TDA , Toma , Trabajaremos , Vamos]
+
+Eliminamos todas las palabras de la pagina listas.edu.ar una por una con la operacion eliminarPalabra:
+
+(process:23195): Gtk-WARNING **: 22:30:38.477: Locale not supported by C library.
+        Using the fallback 'C' locale.
+
+Contamos de nuevo las palabras de cada una de las paginas guardadas:
+La pagina arboles.wordpress.com tiene 52 palabras distintas ingresadas segun datos de entrada.
+La pagina arboles.wordpress.com tiene 27 palabras distintas segun el arbol.
+La pagina listas.edu.ar tiene 79 palabras distintas ingresadas segun datos de entrada.
+La pagina listas.edu.ar tiene 0 palabras distintas segun el arbol.
+La pagina aprenderaprogramar.com tiene 69 palabras distintas ingresadas segun datos de entrada.
+La pagina aprenderaprogramar.com tiene 39 palabras distintas segun el arbol.
+La pagina python.org.ar tiene 104 palabras distintas ingresadas segun datos de entrada.
+La pagina python.org.ar tiene 75 palabras distintas segun el arbol.
+La pagina geekytheory.com tiene 68 palabras distintas ingresadas segun datos de entrada.
+La pagina geekytheory.com tiene 53 palabras distintas segun el arbol.
+La pagina inf.udec.cl tiene 73 palabras distintas ingresadas segun datos de entrada.
+La pagina inf.udec.cl tiene 50 palabras distintas segun el arbol.
+La pagina programacionuno.wordpress.com tiene 48 palabras distintas ingresadas segun datos de entrada.
+La pagina programacionuno.wordpress.com tiene 33 palabras distintas segun el arbol.
+
+Eliminamos la pagina python.org.ar con la operacion eliminarPagina:
+
+(process:23209): Gtk-WARNING **: 22:30:39.473: Locale not supported by C library.
+        Using the fallback 'C' locale.
+qt5ct: using qt5ct plugin
+
+Contamos de nuevo las palabras de cada una de las paginas guardadas:
+La pagina arboles.wordpress.com tiene 52 palabras distintas ingresadas segun datos de entrada.
+La pagina arboles.wordpress.com tiene 27 palabras distintas segun el arbol.
+La pagina listas.edu.ar tiene 79 palabras distintas ingresadas segun datos de entrada.
+La pagina listas.edu.ar tiene 0 palabras distintas segun el arbol.
+La pagina aprenderaprogramar.com tiene 69 palabras distintas ingresadas segun datos de entrada.
+La pagina aprenderaprogramar.com tiene 39 palabras distintas segun el arbol.
+La pagina python.org.ar tiene 104 palabras distintas ingresadas segun datos de entrada.
+La pagina python.org.ar tiene 0 palabras distintas segun el arbol.
+La pagina geekytheory.com tiene 68 palabras distintas ingresadas segun datos de entrada.
+La pagina geekytheory.com tiene 53 palabras distintas segun el arbol.
+La pagina inf.udec.cl tiene 73 palabras distintas ingresadas segun datos de entrada.
+La pagina inf.udec.cl tiene 50 palabras distintas segun el arbol.
+La pagina programacionuno.wordpress.com tiene 48 palabras distintas ingresadas segun datos de entrada.
+La pagina programacionuno.wordpress.com tiene 33 palabras distintas segun el arbol.

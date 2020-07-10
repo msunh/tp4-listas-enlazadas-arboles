@@ -279,12 +279,9 @@ digraph {
 	complicado -> Nonecomplicadol
 	Nonecomplicador [label=None]
 	complicado -> Nonecomplicador
-	conceptos [label="conceptos
-[ , aprenderaprogramar.com]"]
-	"computación" -> conceptos
 	con [label="con
 [ , aprenderaprogramar.com , python.org.ar]"]
-	conceptos -> con
+	"computación" -> con
 	comunes [label="comunes
 [ , aprenderaprogramar.com , python.org.ar]"]
 	con -> comunes
@@ -292,9 +289,12 @@ digraph {
 	comunes -> Nonecomunesl
 	Nonecomunesr [label=None]
 	comunes -> Nonecomunesr
+	conceptos [label="conceptos
+[ , aprenderaprogramar.com]"]
+	con -> conceptos
 	"concatenación" [label="concatenación
 [ , python.org.ar]"]
-	con -> "concatenación"
+	conceptos -> "concatenación"
 	"Noneconcatenaciónl" [label=None]
 	"concatenación" -> "Noneconcatenaciónl"
 	concepto [label="concepto
@@ -883,12 +883,9 @@ digraph {
 	resolver -> saben
 	Nonesabenl [label=None]
 	saben -> Nonesabenl
-	signifique [label="signifique
-[ , aprenderaprogramar.com , python.org.ar]"]
-	saben -> signifique
 	se [label="se
 [ , aprenderaprogramar.com , python.org.ar , geekytheory.com , inf.udec.cl , programacionuno.wordpress.com]"]
-	signifique -> se
+	saben -> se
 	sacar [label="sacar
 [ , inf.udec.cl]"]
 	se -> sacar
@@ -916,8 +913,11 @@ digraph {
 	secuencia -> Nonesecuenciar
 	Nonesencillor [label=None]
 	sencillo -> Nonesencillor
-	Noneserr [label=None]
-	ser -> Noneserr
+	signifique [label="signifique
+[ , aprenderaprogramar.com , python.org.ar]"]
+	ser -> signifique
+	Nonesignifiquel [label=None]
+	signifique -> Nonesignifiquel
 	Nonesignifiquer [label=None]
 	signifique -> Nonesignifiquer
 	software [label="software
