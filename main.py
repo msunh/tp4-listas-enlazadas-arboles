@@ -61,6 +61,7 @@ print()
 # arbol1.eliminarPagina("cualquiera.com")
 # arbol1.treePlot("eliminadoCualquiera")
 
+
 print("cantidad total de palabras: ", arbol1.cantidadTotalPalabras(1))
 print()
 

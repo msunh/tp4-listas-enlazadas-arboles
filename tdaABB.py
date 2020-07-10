@@ -549,6 +549,8 @@ class ArbolBuscador:
           
     return listaPalabras                                                        #retorno la lista de palabras en orden alfabético
 
+
+
   #ORIGINAL SOLO NODOS
   #funcion para salida-graficar (ARBOL)  
   # def treePlot(self, fileName='representacionAbolEjemplo'):

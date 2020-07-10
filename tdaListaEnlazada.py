@@ -155,6 +155,8 @@ class Lista:
       self.append(aux.dato)       #hago append del dato
       aux = aux.siguiente         #ahora aux es el siguiente, repite el proceso hasta que aux apunte a none (haya recorrido toda la lista)
 
+
+
   #funcionAuxiliar, devuelve la cantidad de veces que una pagina web está repetida en una lista (un numero)
   def cantWebRepetidasEnLista(self,paginaWeb): 
     aux = self.primero            #aux arranca en primero
